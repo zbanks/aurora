@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Thu 26 Dec 2013 06:07:39 PM EST
+EESchema Schematic File Version 2  date Sun 05 Jan 2014 06:13:05 AM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,13 +29,15 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-EELAYER 43  0
+LIBS:custom
+LIBS:LED Strip rev 2-cache
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "26 dec 2013"
+Date "5 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -43,4 +45,193 @@ Comment2 ""
 Comment3 ""
 Comment4 ""
 $EndDescr
+Text Label 3600 3450 0    60   ~ 0
+OSC_OUT
+Text Label 3600 3350 0    60   ~ 0
+OSC_IN
+Wire Wire Line
+	4100 3450 3500 3450
+Wire Wire Line
+	7700 3950 7100 3950
+Wire Wire Line
+	6000 3250 6650 3250
+Connection ~ 2350 3750
+Connection ~ 2950 3750
+Wire Wire Line
+	2950 3150 2950 3750
+Wire Wire Line
+	2350 3750 2350 3200
+Wire Wire Line
+	6650 3350 6000 3350
+Wire Wire Line
+	7700 3750 7100 3750
+Wire Wire Line
+	4100 3350 3500 3350
+Text Label 2950 3600 1    60   ~ 0
+OSC_OUT
+Text Label 2350 3600 1    60   ~ 0
+OSC_IN
+Text Label 7200 3950 0    60   ~ 0
+SWDAT
+Text Label 7200 3750 0    60   ~ 0
+SWCLK
+$Comp
+L GND #PWR?
+U 1 1 52C93D8F
+P 7700 3850
+F 0 "#PWR?" H 7700 3850 30  0001 C CNN
+F 1 "GND" H 7700 3780 30  0001 C CNN
+	1    7700 3850
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 52C93D8C
+P 7700 3650
+F 0 "#PWR?" H 7700 3610 30  0001 C CNN
+F 1 "+3.3V" H 7700 3760 30  0000 C CNN
+	1    7700 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L CONN_4 P?
+U 1 1 52C93D86
+P 8050 3800
+F 0 "P?" V 8000 3800 50  0000 C CNN
+F 1 "CONN_4" V 8100 3800 50  0000 C CNN
+	1    8050 3800
+	1    0    0    -1  
+$EndComp
+Text Label 6200 3250 0    60   ~ 0
+SWCLK
+Text Label 6200 3350 0    60   ~ 0
+SWDAT
+$Comp
+L GND #PWR?
+U 1 1 52C93CB1
+P 2950 4150
+F 0 "#PWR?" H 2950 4150 30  0001 C CNN
+F 1 "GND" H 2950 4080 30  0001 C CNN
+	1    2950 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52C93CAF
+P 2350 4150
+F 0 "#PWR?" H 2350 4150 30  0001 C CNN
+F 1 "GND" H 2350 4080 30  0001 C CNN
+	1    2350 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52C93CA0
+P 2950 3950
+F 0 "C?" H 3000 4050 50  0000 L CNN
+F 1 "10p" H 3000 3850 50  0000 L CNN
+	1    2950 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52C93C9C
+P 2350 3950
+F 0 "C?" H 2400 4050 50  0000 L CNN
+F 1 "10p" H 2400 3850 50  0000 L CNN
+	1    2350 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L CRYSTAL X?
+U 1 1 52C93C96
+P 2650 3750
+F 0 "X?" H 2650 3900 60  0000 C CNN
+F 1 "8M" H 2650 3600 60  0000 C CNN
+	1    2650 3750
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52C93C8E
+P 4800 2650
+F 0 "#PWR?" H 4800 2650 30  0001 C CNN
+F 1 "GND" H 4800 2580 30  0001 C CNN
+	1    4800 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 52C93C82
+P 3900 4100
+F 0 "#PWR?" H 3900 4060 30  0001 C CNN
+F 1 "+3.3V" H 3900 4210 30  0000 C CNN
+	1    3900 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52C93C7F
+P 3900 4500
+F 0 "#PWR?" H 3900 4500 30  0001 C CNN
+F 1 "GND" H 3900 4430 30  0001 C CNN
+	1    3900 4500
+	1    0    0    -1  
+$EndComp
+$Comp
+L C C?
+U 1 1 52C93C7C
+P 3900 4300
+F 0 "C?" H 3950 4400 50  0000 L CNN
+F 1 "100n" H 3950 4200 50  0000 L CNN
+	1    3900 4300
+	1    0    0    -1  
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 52C93C75
+P 6000 3950
+F 0 "#PWR?" H 6000 3910 30  0001 C CNN
+F 1 "+3.3V" H 6000 4060 30  0000 C CNN
+	1    6000 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 52C93C72
+P 4100 3650
+F 0 "#PWR?" H 4100 3610 30  0001 C CNN
+F 1 "+3.3V" H 4100 3760 30  0000 C CNN
+	1    4100 3650
+	0    -1   -1   0   
+$EndComp
+$Comp
+L +3.3V #PWR?
+U 1 1 52C93C6E
+P 4100 3250
+F 0 "#PWR?" H 4100 3210 30  0001 C CNN
+F 1 "+3.3V" H 4100 3360 30  0000 C CNN
+	1    4100 3250
+	0    -1   -1   0   
+$EndComp
+$Comp
+L GND #PWR?
+U 1 1 52C93C65
+P 5600 4550
+F 0 "#PWR?" H 5600 4550 30  0001 C CNN
+F 1 "GND" H 5600 4480 30  0001 C CNN
+	1    5600 4550
+	1    0    0    -1  
+$EndComp
+$Comp
+L STM32F051-32QFN U?
+U 1 1 52C93C60
+P 5050 3600
+F 0 "U?" H 5050 3450 50  0000 C CNN
+F 1 "STM32F051K8U8" H 5050 3600 50  0000 C CNN
+F 2 "MODULE" H 5050 3600 50  0001 C CNN
+F 3 "DOCUMENTATION" H 5050 3600 50  0001 C CNN
+	1    5050 3600
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC

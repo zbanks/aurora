@@ -1,0 +1,193 @@
+# EESchema Netlist Version 1.1 created  Sun 05 Jan 2014 08:08:40 AM EST
+(
+ ( /52C94DE0 SM1206 C1 47uF
+  ( 1 +12V )
+  ( 2 GND )
+ )
+ ( /52C94DE5 SM0603_Capa C2 1uF
+  ( 1 +12V )
+  ( 2 GND )
+ )
+ ( /52C8F673 SM0805 C3 4.7uF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /52C8F678 SM0603_Capa C4 100nF
+  ( 1 VDD )
+  ( 2 GND )
+ )
+ ( /52C8F64B SM0603_Capa C5 100nF
+  ( 1 N-000026 )
+  ( 2 GND )
+ )
+ ( /52C9329E SM0603_Capa C6 1uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /52C9328D SM0603_Capa C7 1uF
+  ( 1 +3.3V )
+  ( 2 GND )
+ )
+ ( /52C9341C SM0805 C8 10uF
+  ( 1 +12V )
+  ( 2 GND )
+ )
+ ( /52C933F5 SM0603_Capa C9 1uF
+  ( 1 +12V )
+  ( 2 GND )
+ )
+ ( /52C933E8 SM0603_Capa C10 1uF
+  ( 1 +5V )
+  ( 2 GND )
+ )
+ ( /52C953E1 S_JUMPER_3 GS1 GS3
+  ( 1 VDD )
+  ( 2 N-000005 )
+  ( 3 N-000026 )
+ )
+ ( /52C956C8 PIN_ARRAY_1 P1 CONN_1
+  ( 1 N-000006 )
+ )
+ ( /52C956B9 PIN_ARRAY_5x1 P2 CONN_5
+  ( 1 N-000018 )
+  ( 2 N-000016 )
+  ( 3 N-000017 )
+  ( 4 N-000019 )
+  ( 5 N-000015 )
+ )
+ ( /52C95496 JACK_ALIM P3 CONN_2
+  ( 1 GND )
+  ( 2 +12V )
+ )
+ ( /52C90D6A DIP-16__300 U1 AURORA_CARD
+  ( 1 GND )
+  ( 2 /TX )
+  ( 3 /RX )
+  ( 4 /RTS )
+  ( 5 GND )
+  ( 6 GND )
+  ( 7 GND )
+  ( 8 GND )
+  ( 9 +12V )
+  ( 10 +12V )
+  ( 11 +12V )
+  ( 12 +12V )
+  ( 13 +5V )
+  ( 14 +5V )
+  ( 15 +3.3V )
+  ( 16 GND )
+ )
+ ( /52C8F276 MICRO-B_USB U2 MICRO-B_USB
+  ( 1 VDD )
+  ( 2 N-000021 )
+  ( 3 N-000020 )
+  ( 4 ? )
+  ( 5 GND )
+ )
+ ( /52C8F1FB SSOP28 U3 FT232RL
+  ( 1 /TX )
+  ( 2 ? )
+  ( 3 /RTS )
+  ( 4 N-000005 )
+  ( 5 /RX )
+  ( 6 ? )
+  ( 7 GND )
+  ( 9 ? )
+  ( 10 ? )
+  ( 11 N-000006 )
+  ( 12 N-000015 )
+  ( 13 N-000017 )
+  ( 14 N-000019 )
+  ( 15 N-000020 )
+  ( 16 N-000021 )
+  ( 17 N-000026 )
+  ( 18 GND )
+  ( 19 ? )
+  ( 20 VDD )
+  ( 21 GND )
+  ( 22 N-000016 )
+  ( 23 N-000018 )
+  ( 25 GND )
+  ( 26 GND )
+  ( 27 ? )
+  ( 28 ? )
+ )
+ ( /52C9324F SOT23 U4 AP7333
+  ( 1 GND )
+  ( 2 +3.3V )
+  ( 3 +5V )
+ )
+ ( /52C933D6 SOT223 U5 LD1117
+  ( 1 GND )
+  ( 2 +5V )
+  ( 3 +12V )
+ )
+)
+*
+{ Allowed footprints by component:
+$component C1
+ SM*
+ C?
+ C1-1
+$endlist
+$component C2
+ SM*
+ C?
+ C1-1
+$endlist
+$component C3
+ SM*
+ C?
+ C1-1
+$endlist
+$component C4
+ SM*
+ C?
+ C1-1
+$endlist
+$component C5
+ SM*
+ C?
+ C1-1
+$endlist
+$component C6
+ SM*
+ C?
+ C1-1
+$endlist
+$component C7
+ SM*
+ C?
+ C1-1
+$endlist
+$component C8
+ SM*
+ C?
+ C1-1
+$endlist
+$component C9
+ SM*
+ C?
+ C1-1
+$endlist
+$component C10
+ SM*
+ C?
+ C1-1
+$endlist
+$component U4
+ SOT223
+ TO252
+ SOT89
+ TO263
+ TO220
+$endlist
+$component U5
+ SOT223
+ TO252
+ SOT89
+ TO263
+ TO220
+$endlist
+$endfootprintlist
+}

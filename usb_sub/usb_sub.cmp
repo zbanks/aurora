@@ -1,0 +1,136 @@
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sun 05 Jan 2014 08:08:40 AM EST
+
+BeginCmp
+TimeStamp = /52C94DE0;
+Reference = C1;
+ValeurCmp = 47uF;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C94DE5;
+Reference = C2;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F673;
+Reference = C3;
+ValeurCmp = 4.7uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F678;
+Reference = C4;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F64B;
+Reference = C5;
+ValeurCmp = 100nF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9329E;
+Reference = C6;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9328D;
+Reference = C7;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9341C;
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = SM0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C933F5;
+Reference = C9;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C933E8;
+Reference = C10;
+ValeurCmp = 1uF;
+IdModule  = SM0603_Capa;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C953E1;
+Reference = GS1;
+ValeurCmp = GS3;
+IdModule  = S_JUMPER_3;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C956C8;
+Reference = P1;
+ValeurCmp = CONN_1;
+IdModule  = PIN_ARRAY_1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C956B9;
+Reference = P2;
+ValeurCmp = CONN_5;
+IdModule  = PIN_ARRAY_5x1;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C95496;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = JACK_ALIM;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C90D6A;
+Reference = U1;
+ValeurCmp = AURORA_CARD;
+IdModule  = DIP-16__300;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F276;
+Reference = U2;
+ValeurCmp = MICRO-B_USB;
+IdModule  = MICRO-B_USB;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F1FB;
+Reference = U3;
+ValeurCmp = FT232RL;
+IdModule  = SSOP28;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9324F;
+Reference = U4;
+ValeurCmp = AP7333;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C933D6;
+Reference = U5;
+ValeurCmp = LD1117;
+IdModule  = SOT223;
+EndCmp
+
+EndListe

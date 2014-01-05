@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source "/home/eric/aurora/ledstrip_digital_main/LED Strip rev 2.sch")
-    (date "Sun 05 Jan 2014 09:50:54 AM EST")
+    (date "Sun 05 Jan 2014 10:00:30 AM EST")
     (tool "eeschema (2013-jul-07)-stable"))
   (components
     (comp (ref SW1)
@@ -20,12 +20,12 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 52C96DC7))
     (comp (ref R8)
-      (value R)
+      (value 330R)
       (libsource (lib device) (part R))
       (sheetpath (names /) (tstamps /))
       (tstamp 52C96D41))
     (comp (ref R7)
-      (value R)
+      (value 330R)
       (libsource (lib device) (part R))
       (sheetpath (names /) (tstamps /))
       (tstamp 52C96D3B))

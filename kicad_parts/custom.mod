@@ -1,0 +1,48 @@
+PCBNEW-LibModule-V1  Thu 02 Jan 2014 04:43:45 PM EST
+Units mm
+# encoding utf-8
+$INDEX
+CX5
+$EndINDEX
+$MODULE CX5
+Po 0 0 0 15 5241ECDF 00000000 ~~
+Li CX5
+Sc 0
+AR
+Op 0 0 0
+T0 -0.5 -4 1 1 0 0.15 N V 21 N "CX5"
+T1 0 0 1 1 900 0.15 N V 21 N "VAL**"
+DS -3.6 -2.6 3.6 -2.6 0.15 21
+DS 3.6 -2.6 3.6 2.6 0.15 21
+DS 3.6 2.6 -3.6 2.6 0.15 21
+DS -3.6 2.6 -3.6 -2.6 0.15 21
+$PAD
+Sh "1" R 1.1 2.2 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.2 1.25
+$EndPAD
+$PAD
+Sh "4" R 1.1 2.2 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.2 1.25
+$EndPAD
+$PAD
+Sh "2" R 1.1 2.2 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po 3.2 -1.25
+$EndPAD
+$PAD
+Sh "3" R 1.1 2.2 0 0 900
+Dr 0 0 0
+At SMD N 00888000
+Ne 0 ""
+Po -3.2 -1.25
+$EndPAD
+$EndMODULE CX5
+$EndLIBRARY

@@ -1,4 +1,4 @@
-update=Thu 26 Dec 2013 06:12:36 PM EST
+update=Sun 05 Jan 2014 05:30:46 AM EST
 version=1
 last_client=eeschema
 [cvpcb]
@@ -100,4 +100,4 @@ LibName27=opto
 LibName28=atmel
 LibName29=contrib
 LibName30=valves
-LibName31=STM32F102xx
+LibName31=/home/eric/aurora/kicad_parts/custom

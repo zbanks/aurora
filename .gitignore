@@ -15,3 +15,11 @@
 *.exe
 *.out
 *.app
+
+# Kicad Backups
+*.bak
+
+# Vim Swap
+*.swp
+*.swo
+*.swn

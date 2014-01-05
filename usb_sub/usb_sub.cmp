@@ -1,4 +1,4 @@
-Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sun 05 Jan 2014 08:08:40 AM EST
+Cmp-Mod V01 Created by CvPcb (2012-apr-16-27)-stable date = Sun 05 Jan 2014 09:47:20 AM EST
 
 BeginCmp
 TimeStamp = /52C94DE0;
@@ -17,15 +17,8 @@ EndCmp
 BeginCmp
 TimeStamp = /52C8F673;
 Reference = C3;
-ValeurCmp = 4.7uF;
+ValeurCmp = 10uF;
 IdModule  = SM0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C8F678;
-Reference = C4;
-ValeurCmp = 100nF;
-IdModule  = SM0603_Capa;
 EndCmp
 
 BeginCmp
@@ -57,17 +50,31 @@ IdModule  = SM0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C933F5;
-Reference = C9;
-ValeurCmp = 1uF;
-IdModule  = SM0603_Capa;
+TimeStamp = /52C96E89;
+Reference = D1;
+ValeurCmp = TX;
+IdModule  = LED-0603;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C933E8;
-Reference = C10;
-ValeurCmp = 1uF;
-IdModule  = SM0603_Capa;
+TimeStamp = /52C96E8D;
+Reference = D2;
+ValeurCmp = RX;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E6A;
+Reference = D3;
+ValeurCmp = PWR;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E6C;
+Reference = D4;
+ValeurCmp = 12V;
+IdModule  = LED-0603;
 EndCmp
 
 BeginCmp
@@ -81,14 +88,7 @@ BeginCmp
 TimeStamp = /52C956C8;
 Reference = P1;
 ValeurCmp = CONN_1;
-IdModule  = PIN_ARRAY_1;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C956B9;
-Reference = P2;
-ValeurCmp = CONN_5;
-IdModule  = PIN_ARRAY_5x1;
+IdModule  = 1PIN_S_SMD;
 EndCmp
 
 BeginCmp
@@ -99,10 +99,38 @@ IdModule  = JACK_ALIM;
 EndCmp
 
 BeginCmp
+TimeStamp = /52C96EA2;
+Reference = R1;
+ValeurCmp = 270;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96EA4;
+Reference = R2;
+ValeurCmp = 270;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96FA6;
+Reference = R3;
+ValeurCmp = 270;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96FAA;
+Reference = R4;
+ValeurCmp = 10K;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /52C90D6A;
 Reference = U1;
 ValeurCmp = AURORA_CARD;
-IdModule  = DIP-16__300;
+IdModule  = AURORA_CARD;
 EndCmp
 
 BeginCmp

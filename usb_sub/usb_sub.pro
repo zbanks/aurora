@@ -1,4 +1,4 @@
-update=Sun 05 Jan 2014 08:09:16 AM EST
+update=Sun 05 Jan 2014 09:48:02 AM EST
 version=1
 last_client=pcbnew
 [general]
@@ -74,9 +74,9 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
+PadDrlX=0
+PadDimH=1440
+PadDimV=800
 BoardThickness=630
 TxtPcbV=800
 TxtPcbH=600
@@ -103,3 +103,4 @@ LibName9=dip_sockets
 LibName10=pga_sockets
 LibName11=valves
 LibName12=/home/zbanks/kicadlibrary/open-project
+LibName13=/home/zbanks/aurora/kicad_parts/AURORA_CARD

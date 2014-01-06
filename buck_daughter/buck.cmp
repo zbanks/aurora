@@ -1,0 +1,150 @@
+Cmp-Mod V01 Created by CvPcb (2013-jul-07)-stable date = Mon 06 Jan 2014 11:39:22 AM EST
+
+BeginCmp
+TimeStamp = /51CE927E;
+Reference = C1;
+ValeurCmp = 2u2;
+IdModule  = SM1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB636;
+Reference = C2;
+ValeurCmp = 2u2;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB629;
+Reference = C3;
+ValeurCmp = 1u;
+IdModule  = SM0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE92C2;
+Reference = C4;
+ValeurCmp = 100n;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9304;
+Reference = C5;
+ValeurCmp = 5n6;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9313;
+Reference = C6;
+ValeurCmp = 120p;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9442;
+Reference = C7;
+ValeurCmp = 10u;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE973A;
+Reference = C8;
+ValeurCmp = 10u;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB429;
+Reference = CONN1;
+ValeurCmp = AURORA_CARD;
+IdModule  = AURORA_CARD;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9396;
+Reference = D1;
+ValeurCmp = DIODE;
+IdModule  = DPAK2;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE93F3;
+Reference = L1;
+ValeurCmp = 33u;
+IdModule  = MSS1210;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE88DA;
+Reference = P1;
+ValeurCmp = Modular Jack In;
+IdModule  = Assman-6p4c;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAAE2F;
+Reference = R1;
+ValeurCmp = 120R;
+IdModule  = SM1206;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE936E;
+Reference = R2;
+ValeurCmp = 221k;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE92F5;
+Reference = R3;
+ValeurCmp = 6K19;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9402;
+Reference = R4;
+ValeurCmp = 143k;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9411;
+Reference = R5;
+ValeurCmp = 10k2;
+IdModule  = SM0402;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB3E2;
+Reference = U1;
+ValeurCmp = LD1117;
+IdModule  = sot89;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB3D0;
+Reference = U2;
+ValeurCmp = AP73333;
+IdModule  = SOT23;
+EndCmp
+
+BeginCmp
+TimeStamp = /52CAB0FD;
+Reference = U3;
+ValeurCmp = ST485E;
+IdModule  = SO8E;
+EndCmp
+
+BeginCmp
+TimeStamp = /51CE9211;
+Reference = U4;
+ValeurCmp = TPS54360DDAR;
+IdModule  = SO8_WITH_EP;
+EndCmp
+
+EndListe

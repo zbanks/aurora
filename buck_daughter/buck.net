@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source /home/eric/aurora/buck_daughter/buck.sch)
-    (date "Mon 06 Jan 2014 11:32:22 AM EST")
+    (date "Thu 09 Jan 2014 04:01:30 AM EST")
     (tool "eeschema (2013-jul-07)-stable"))
   (components
     (comp (ref P1)
@@ -47,7 +47,7 @@
       (sheetpath (names /) (tstamps /))
       (tstamp 51CE936E))
     (comp (ref D1)
-      (value DIODE)
+      (value VS-50WQ10FN)
       (libsource (lib device) (part DIODE))
       (sheetpath (names /) (tstamps /))
       (tstamp 51CE9396))

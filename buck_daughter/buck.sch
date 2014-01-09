@@ -38,7 +38,7 @@ $Descr A4 11693 8268
 encoding utf-8
 Sheet 1 1
 Title ""
-Date "6 jan 2014"
+Date "9 jan 2014"
 Rev ""
 Comp ""
 Comment1 ""
@@ -205,7 +205,7 @@ L DIODE D1
 U 1 1 51CE9396
 P 7000 1750
 F 0 "D1" H 7000 1850 40  0000 C CNN
-F 1 "DIODE" H 7000 1650 40  0000 C CNN
+F 1 "VS-50WQ10FN" H 7000 1650 40  0000 C CNN
 F 2 "" H 7000 1750 60  0000 C CNN
 F 3 "" H 7000 1750 60  0000 C CNN
 	1    7000 1750

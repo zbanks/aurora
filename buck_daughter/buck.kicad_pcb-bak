@@ -60,7 +60,7 @@
     (pad_drill 0)
     (pad_to_mask_clearance 0)
     (aux_axis_origin 0 0)
-    (visible_elements FFFFDFBF)
+    (visible_elements FFFFBFBF)
     (pcbplotparams
       (layerselection 284196865)
       (usegerberextensions true)
@@ -730,10 +730,10 @@
     )
   )
 
-  (module MSS1210 (layer F.Cu) (tedit 52CE5C0B) (tstamp 52CAB9C6)
+  (module MSS1210 (layer F.Cu) (tedit 52CE6A8B) (tstamp 52CAB9C6)
     (at 216.916 151.13 270)
     (path /51CE93F3)
-    (fp_text reference L1 (at -4.318 5.842 540) (layer F.SilkS)
+    (fp_text reference L1 (at -4.318 6.731 270) (layer F.SilkS)
       (effects (font (size 0.762 0.762) (thickness 0.13)))
     )
     (fp_text value 33u (at 0.05 -0.15 270) (layer F.SilkS)

@@ -1,4 +1,4 @@
-update=Wed 15 Jan 2014 11:24:00 PM EST
+update=Thu 16 Jan 2014 03:17:11 AM EST
 version=1
 last_client=eeschema
 [cvpcb]
@@ -103,3 +103,6 @@ LibName30=valves
 LibName31=/home/zbanks/kicadlibrary/open-project
 LibName32=/home/zbanks/aurora/kicad_parts/SN65HVD09
 LibName33=/home/zbanks/aurora/kicad_parts/tm4c1232d5pm
+LibName34=/home/zbanks/aurora/kicad_parts/AURORA_CARD
+LibName35=/home/zbanks/aurora/kicad_parts/custom
+LibName36=/home/zbanks/aurora/kicad_parts/tm4c1231d5pm

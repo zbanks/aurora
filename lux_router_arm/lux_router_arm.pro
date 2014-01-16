@@ -1,11 +1,6 @@
-update=Thu 16 Jan 2014 03:17:11 AM EST
+update=Thu 16 Jan 2014 04:08:54 AM EST
 version=1
-last_client=eeschema
-[cvpcb]
-version=1
-NetIExt=net
-[cvpcb/libraries]
-EquName1=devcms
+last_client=cvpcb
 [pcbnew]
 version=1
 PadDrlX=320
@@ -24,7 +19,6 @@ TxtLar=120
 MSegLar=150
 LastNetListRead=
 [pcbnew/libraries]
-LibDir=
 LibName1=sockets
 LibName2=connect
 LibName3=discret
@@ -36,6 +30,10 @@ LibName8=led
 LibName9=dip_sockets
 LibName10=pga_sockets
 LibName11=valves
+LibName12=/home/zbanks/kicadlibrary/open-project
+LibName13=/home/zbanks/aurora/kicad_parts/AURORA_CARD
+LibName14=/home/zbanks/aurora/kicad_parts/custom
+LibDir=
 [general]
 version=1
 [eeschema]
@@ -106,3 +104,8 @@ LibName33=/home/zbanks/aurora/kicad_parts/tm4c1232d5pm
 LibName34=/home/zbanks/aurora/kicad_parts/AURORA_CARD
 LibName35=/home/zbanks/aurora/kicad_parts/custom
 LibName36=/home/zbanks/aurora/kicad_parts/tm4c1231d5pm
+[cvpcb]
+version=1
+NetIExt=net
+[cvpcb/libraries]
+EquName1=devcms

@@ -1,4 +1,4 @@
-EESchema Schematic File Version 2  date Wed 15 Jan 2014 12:48:52 AM EST
+EESchema Schematic File Version 2  date Wed 15 Jan 2014 11:23:15 PM EST
 LIBS:power
 LIBS:device
 LIBS:transistors
@@ -29,10 +29,7 @@ LIBS:opto
 LIBS:atmel
 LIBS:contrib
 LIBS:valves
-LIBS:SN65HVD09
-LIBS:open-project
-LIBS:tm4c1232d5pm
-EELAYER 43  0
+EELAYER 25  0
 EELAYER END
 $Descr A4 11700 8267
 encoding utf-8

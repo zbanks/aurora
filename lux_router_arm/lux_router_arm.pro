@@ -1,4 +1,4 @@
-update=Thu 16 Jan 2014 04:50:49 AM EST
+update=Sun 19 Jan 2014 05:55:42 PM EST
 version=1
 last_client=pcbnew
 [general]
@@ -71,6 +71,7 @@ LibName33=/home/zbanks/aurora/kicad_parts/tm4c1232d5pm
 LibName34=/home/zbanks/aurora/kicad_parts/AURORA_CARD
 LibName35=/home/zbanks/aurora/kicad_parts/custom
 LibName36=/home/zbanks/aurora/kicad_parts/tm4c1231d5pm
+LibName37=/tmp/custom
 [cvpcb]
 version=1
 NetIExt=net
@@ -78,21 +79,23 @@ NetIExt=net
 EquName1=devcms
 [pcbnew]
 version=1
-PadDrlX=320
-PadDimH=600
-PadDimV=600
-BoardThickness=630
-TxtPcbV=800
-TxtPcbH=600
-TxtModV=600
-TxtModH=600
-TxtModW=120
-VEgarde=100
-DrawLar=150
-EdgeLar=150
-TxtLar=120
-MSegLar=150
 LastNetListRead=lux_router_arm.net
+UseCmpFile=1
+PadDrill="    0.000000"
+PadDrillOvalY="    0.000000"
+PadSizeH="    0.635000"
+PadSizeV="    0.838200"
+PcbTextSizeV="    2.032000"
+PcbTextSizeH="    1.524000"
+PcbTextThickness="    0.304800"
+ModuleTextSizeV="    1.524000"
+ModuleTextSizeH="    1.524000"
+ModuleTextSizeThickness="    0.304800"
+SolderMaskClearance="    0.254000"
+SolderMaskMinWidth="    0.000000"
+DrawSegmentWidth="    0.381000"
+BoardOutlineThickness="    0.381000"
+ModuleOutlineThickness="    0.381000"
 [pcbnew/libraries]
 LibDir=
 LibName1=sockets
@@ -109,3 +112,4 @@ LibName11=valves
 LibName12=/home/zbanks/kicadlibrary/open-project
 LibName13=/home/zbanks/aurora/kicad_parts/AURORA_CARD
 LibName14=/home/zbanks/aurora/kicad_parts/custom
+LibName15=/home/zbanks/aurora/kicad_parts/Q_49U3HMS

@@ -23,3 +23,6 @@
 *.swp
 *.swo
 *.swn
+
+firmware/Libraries
+firmware/LED Strip/EWARM/STM32F051

@@ -4734,7 +4734,7 @@
   <group>
     <name>User</name>
     <file>
-      <name>$PROJ_DIR$\..\..\Bit Bang Digital LED Strip\src\bespeckle.c</name>
+      <name>$PROJ_DIR$\..\bespeckle.c</name>
     </file>
     <file>
       <name>$PROJ_DIR$\..\hal.c</name>

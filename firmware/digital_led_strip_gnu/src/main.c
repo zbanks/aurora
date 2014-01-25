@@ -1,10 +1,12 @@
 #include "hal.h"
 #include <stdint.h>
 //#include <bespeckle.h>
+#include "dmx.h"
 
 //const char a[]="Hello\r\n";
 
 #define STRIP_LENGTH (STRIP_PIXELS)
+
 int main(void)
 {
   static int16_t a;
@@ -17,6 +19,8 @@ int main(void)
   */
   
   init();
+  for(int i=0;i<STRIP_LENGTH;i++)
+    strip_data[i]=pack_RGB(0,0,0);
   while(1)
   {
     /*
@@ -26,6 +30,7 @@ int main(void)
     
     btn=get_button();
     set_led(btn);
+    poll_usart();
     
 
     if(btn)
@@ -36,7 +41,7 @@ int main(void)
     else
     {
       for(int i=0;i<STRIP_LENGTH;i++){
-        strip_data[i]=pack_RGB(5,0,5);
+        //strip_data[i]=pack_RGB(5,0,5);
      // for(long i=1;i < 100000;i++){
         //strip_data[i]=pack_RGB(0,0,0);
       }

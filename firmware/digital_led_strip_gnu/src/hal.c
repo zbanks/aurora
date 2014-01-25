@@ -116,7 +116,7 @@ void init()
   USART_DeInit(USART1);
   USART_StructInit(&USART_InitStructure);
 
-  USART_InitStructure.USART_BaudRate = 115200;
+  USART_InitStructure.USART_BaudRate = USART_BAUD_RATE;
   USART_InitStructure.USART_HardwareFlowControl = USART_HardwareFlowControl_RTS;
   USART_Init(USART1, &USART_InitStructure);
   USART_Cmd(USART1, ENABLE);

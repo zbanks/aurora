@@ -69,6 +69,7 @@ DISCOVERY    = ../../STM32F0-Discovery_FW_V1.0.0/Utilities/STM32F0-Discovery
 LINKER = ./linker
 SRC = ./src/main.c
 SRC += ./src/hal.c
+SRC += ./src/dmx.c
 #SRC += ./src/effects.c
 #SRC += ./src/bespeckle.c
 SRC += ./src/stm32f0xx_it.c
@@ -114,7 +115,7 @@ ULIBDIR =
 ULIBS =
  
 # Define optimisation level here
-OPT = -Os
+OPT = -O0
  
 #
 # End of user defines
@@ -145,8 +146,8 @@ LIBS    = $(DLIBS) $(ULIBS)
 MCFLAGS = -mcpu=$(MCU)
  
 ASFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) $(ADEFS)
-CPFLAGS = $(MCFLAGS) $(OPT) -std=c99 -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
-LDFLAGS = $(MCFLAGS) -mthumb -nostartfiles -T$(LDSCRIPT) -Wl,-Map=$(FULL_PRJ).map,--cref,--no-warn-mismatch $(LIBDIR)
+CPFLAGS = $(MCFLAGS) $(OPT) -g -std=c99 -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
+LDFLAGS = $(MCFLAGS) -g -mthumb -nostartfiles -T$(LDSCRIPT) -Wl,-Map=$(FULL_PRJ).map,--cref,--no-warn-mismatch $(LIBDIR)
  
 # Generate dependency information
 CPFLAGS += -MD -MP -MF .dep/$(@F).d

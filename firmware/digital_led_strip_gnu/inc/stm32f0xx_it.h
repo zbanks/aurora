@@ -1,14 +1,14 @@
 /**
   ******************************************************************************
-  * @file    IO_Toggle/stm32f0xx_it.h 
+  * @file    Project/STM32F0xx_StdPeriph_Templates/stm32f0xx_it.h 
   * @author  MCD Application Team
-  * @version V1.0.0
-  * @date    23-March-2012
+  * @version V1.3.1
+  * @date    17-January-2014
   * @brief   This file contains the headers of the interrupt handlers.
   ******************************************************************************
   * @attention
   *
-  * <h2><center>&copy; COPYRIGHT 2012 STMicroelectronics</center></h2>
+  * <h2><center>&copy; COPYRIGHT 2014 STMicroelectronics</center></h2>
   *
   * Licensed under MCD-ST Liberty SW License Agreement V2, (the "License");
   * You may not use this file except in compliance with the License.
@@ -34,8 +34,6 @@
 #endif 
 
 /* Includes ------------------------------------------------------------------*/
-#include "stm32f0xx.h"
-
 /* Exported types ------------------------------------------------------------*/
 /* Exported constants --------------------------------------------------------*/
 /* Exported macro ------------------------------------------------------------*/
@@ -46,6 +44,8 @@ void HardFault_Handler(void);
 void SVC_Handler(void);
 void PendSV_Handler(void);
 void SysTick_Handler(void);
+
+/*void PPP_IRQHandler(void);*/
 
 #ifdef __cplusplus
 }

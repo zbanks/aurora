@@ -17,7 +17,7 @@
 ##############################################################################################
 # Start of default section
 #
-TRGT = arm-none-eabi-
+TRGT = /home/zbanks/gcc-arm-none-eabi/bin/arm-none-eabi-
 CC   = $(TRGT)gcc
 CP   = $(TRGT)objcopy
 AS   = $(TRGT)gcc -x assembler-with-cpp
@@ -67,10 +67,10 @@ STMSPSRCDDIR = $(STMSPDDIR)/src
 STMSPINCDDIR = $(STMSPDDIR)/inc
 DISCOVERY    = ../../STM32F0-Discovery_FW_V1.0.0/Utilities/STM32F0-Discovery
 LINKER = ./linker
-SRC  = ./src/main.c
-SRC  = ./src/effects.c
-SRC  = ./src/bespeckle.c
-SRC  = ./src/hal.c
+SRC = ./src/main.c
+SRC += ./src/hal.c
+#SRC += ./src/effects.c
+#SRC += ./src/bespeckle.c
 SRC += ./src/stm32f0xx_it.c
 #SRC += $(DEVDIR)/Source/Templates/system_stm32f0xx.c
 SRC += ./src/system_stm32f0xx.c
@@ -145,7 +145,7 @@ LIBS    = $(DLIBS) $(ULIBS)
 MCFLAGS = -mcpu=$(MCU)
  
 ASFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) $(ADEFS)
-CPFLAGS = $(MCFLAGS) $(OPT) -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
+CPFLAGS = $(MCFLAGS) $(OPT) -std=c99 -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
 LDFLAGS = $(MCFLAGS) -mthumb -nostartfiles -T$(LDSCRIPT) -Wl,-Map=$(FULL_PRJ).map,--cref,--no-warn-mismatch $(LIBDIR)
  
 # Generate dependency information
@@ -190,6 +190,8 @@ clean:
 	rm -rf .dep
     
     
+flash:
+	st-flash write $(FULL_PRJ).bin 0x8000000
 # 
 # Include the dependency files, should be the last of the makefile
 #

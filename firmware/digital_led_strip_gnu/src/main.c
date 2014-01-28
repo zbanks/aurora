@@ -3,9 +3,10 @@
 //#include <bespeckle.h>
 #include "dmx.h"
 
-//const char a[]="Hello\r\n";
+const char a[]="UUUUUUUUUUUUUU";
 
 #define STRIP_LENGTH (STRIP_PIXELS)
+
 
 int main(void)
 {
@@ -20,7 +21,8 @@ int main(void)
   
   init();
   for(int i=0;i<STRIP_LENGTH;i++)
-    strip_data[i]=pack_RGB(0,0,0);
+    strip_data[i]=pack_RGB(5,0,0);
+strip_refresh();
   while(1)
   {
     /*
@@ -28,25 +30,28 @@ int main(void)
     compose_all(effects, strip_data); 
     */
     
-    btn=get_button();
-    set_led(btn);
+    //btn=get_button();
+    //set_led(btn);
     poll_usart();
+    //send_str(a, 10);
     
 
+    /*
     if(btn)
     {
       for(int i=0;i<STRIP_LENGTH;i++)
-        strip_data[i]=pack_RGB(0,15,15);
+        strip_data[i]=pack_RGB(0,15,5);
     }
     else
     {
-      for(int i=0;i<STRIP_LENGTH;i++){
+      //for(int i=0;i<STRIP_LENGTH;i++){
         //strip_data[i]=pack_RGB(5,0,5);
      // for(long i=1;i < 100000;i++){
         //strip_data[i]=pack_RGB(0,0,0);
-      }
+      //}
     }
-    strip_refresh();
+    //strip_refresh();
+    */
   }
 }
 

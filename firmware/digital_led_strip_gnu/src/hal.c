@@ -18,8 +18,8 @@
 #define GPIO_PinSource_UART_RTS GPIO_PinSource12
 #define ADC_Channel_V_LED ADC_Channel_0
 #define ADC_Channel_I_LED ADC_Channel_6
-#define USART_TX_BUF_SIZE 100
-#define USART_RX_BUF_SIZE 100
+#define USART_TX_BUF_SIZE 1200
+#define USART_RX_BUF_SIZE 1200
 
 #define STRIP_MEMORY_SIZE (2+STRIP_PIXELS+(STRIP_PIXELS/16))
 uint16_t strip_memory[STRIP_MEMORY_SIZE];
@@ -106,7 +106,7 @@ void init()
   SPI_InitStructure.SPI_CPOL = SPI_CPOL_Low;
   SPI_InitStructure.SPI_CPHA = SPI_CPHA_1Edge;
   SPI_InitStructure.SPI_NSS = SPI_NSS_Soft;
-  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_32;
+  SPI_InitStructure.SPI_BaudRatePrescaler = SPI_BaudRatePrescaler_128;
   SPI_InitStructure.SPI_DataSize = SPI_DataSize_16b;
   SPI_InitStructure.SPI_FirstBit = SPI_FirstBit_MSB;
   SPI_Init(SPI1, &SPI_InitStructure);
@@ -284,4 +284,15 @@ void strip_refresh()
   DMA_ClearFlag(DMA1_FLAG_TC3);
   DMA_SetCurrDataCounter(DMA1_Channel3,STRIP_MEMORY_SIZE);
   DMA_Cmd(DMA1_Channel3, ENABLE);
+}
+
+// Write out strip from memory
+void strip_refresh_nowait()
+{
+  if(DMA_GetFlagStatus(DMA1_FLAG_TC3)){
+      DMA_Cmd(DMA1_Channel3, DISABLE);
+      DMA_ClearFlag(DMA1_FLAG_TC3);
+      DMA_SetCurrDataCounter(DMA1_Channel3,STRIP_MEMORY_SIZE);
+      DMA_Cmd(DMA1_Channel3, ENABLE);
+    }
 }

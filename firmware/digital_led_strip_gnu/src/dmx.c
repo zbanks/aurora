@@ -35,11 +35,15 @@ void set_channel_value(uint16_t channel, uint8_t value){
 
 void poll_usart(){
     int16_t data;
+    static uint8_t s = 0;
     while((data = get_char()) != -1){
         switch(dmx_state){
             case -1:
                 if(data == DMX_FRAME_START){
                     dmx_state++;
+                }else{
+                    set_led(s);
+                    s ^= 1;
                 }
             break;
             case 0: 
@@ -66,8 +70,8 @@ void poll_usart(){
             default:
                 // this should just be DMX_FRAME_END
                 dmx_state = -1;
-                strip_refresh();
             break;
         }
+        strip_refresh_nowait();
     }
 }

@@ -17,5 +17,6 @@ uint16_t get_current();
 void strip_flush();
 uint16_t pack_RGB(uint8_t red, uint8_t green, uint8_t blue);
 void strip_refresh();
+void strip_refresh_nowait();
 void send_str(uint8_t* mem,uint16_t cnt);
 int16_t get_char();

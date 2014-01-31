@@ -15,8 +15,8 @@ MEMORY
 }
  
 /* define stack size and heap size here */
-stack_size = 1024;
-heap_size = 256;
+stack_size = 2048;
+heap_size = 64;
  
 /* define beginning and ending of stack */
 _stack_start = ORIGIN(RAM)+LENGTH(RAM);
@@ -90,6 +90,7 @@ SECTIONS
     {
         _heap_start = .;
         . = . + heap_size;
+        _heap_end = .;
     } > RAM
  
     . = ALIGN(4);
@@ -109,3 +110,10 @@ SECTIONS
  
     .ARM.attributes 0 : { *(.ARM.attributes) }
 }
+ 
+/* end of allocated ram _end */
+PROVIDE( _HEAP_START = _heap_start );
+
+/* end of the heap -> align 8 byte */ 
+PROVIDE ( _HEAP_END = _heap_end );/*ALIGN(ORIGIN(SRAM) + LENGTH(SRAM) - 8 ,8) );*/
+

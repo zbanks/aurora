@@ -18,8 +18,8 @@
 #define GPIO_PinSource_UART_RTS GPIO_PinSource12
 #define ADC_Channel_V_LED ADC_Channel_0
 #define ADC_Channel_I_LED ADC_Channel_6
-#define USART_TX_BUF_SIZE 1200
-#define USART_RX_BUF_SIZE 1200
+#define USART_TX_BUF_SIZE 64
+#define USART_RX_BUF_SIZE 2048
 
 #define STRIP_MEMORY_SIZE (2+STRIP_PIXELS+(STRIP_PIXELS/16))
 uint16_t strip_memory[STRIP_MEMORY_SIZE];

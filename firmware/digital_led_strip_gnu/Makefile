@@ -26,12 +26,12 @@ BIN  = $(CP) -O binary -S
 MCU  = cortex-m0
  
 # List all default C defines here, like -D_DEBUG=1
-DDEFS = -DSTM32F0XX -DUSE_STDPERIPH_DRIVER
+DDEFS = -DSTM32F0XX -DUSE_STDPERIPH_DRIVER -Dmalloc_getpagesize=256
 # List all default ASM defines here, like -D_DEBUG=1
 DADEFS =
  
 # List all default directories to look for include files here
-DINCDIR =
+DINCDIR = ./inc
  
 # List the default directory to look for the libraries here
 DLIBDIR =
@@ -59,19 +59,22 @@ UDEFS =
 UADEFS =
  
 # List C source files here
-LIBSDIR    = /home/zbanks/STM32F0-Discovery_FW_V1.0.0/Libraries
+#LIBSDIR    = /home/zbanks/STM32F0-Discovery_FW_V1.0.0/Libraries
+LIBSDIR    = /home/zbanks/STM32F0xx_StdPeriph_Lib_V1.3.1/Libraries
 CORELIBDIR = $(LIBSDIR)/CMSIS/Include
-DEVDIR  = $(LIBSDIR)/CMSIS/ST/STM32F0xx
+DEVDIR  = $(LIBSDIR)/CMSIS/Device/ST/STM32F0xx
 STMSPDDIR    = $(LIBSDIR)/STM32F0xx_StdPeriph_Driver
 STMSPSRCDDIR = $(STMSPDDIR)/src
 STMSPINCDDIR = $(STMSPDDIR)/inc
-DISCOVERY    = ../../STM32F0-Discovery_FW_V1.0.0/Utilities/STM32F0-Discovery
+#DISCOVERY    = ../../STM32F0-Discovery_FW_V1.0.0/Utilities/STM32F0-Discovery
 LINKER = ./linker
 SRC = ./src/main.c
 SRC += ./src/hal.c
 SRC += ./src/dmx.c
-#SRC += ./src/effects.c
-#SRC += ./src/bespeckle.c
+SRC += ./src/effects.c
+SRC += ./src/bespeckle.c
+SRC += ./src/lux.c
+SRC += ./src/syscalls.c
 SRC += ./src/stm32f0xx_it.c
 #SRC += $(DEVDIR)/Source/Templates/system_stm32f0xx.c
 SRC += ./src/system_stm32f0xx.c
@@ -106,8 +109,8 @@ ASRC = ./startup/startup_stm32f0xx.s
 UINCDIR = $(DEVDIR)/Include \
           $(CORELIBDIR) \
           $(STMSPINCDDIR) \
-          $(DISCOVERY)    \
           ./inc     
+          #$(DISCOVERY)    \
 # List the user directory to look for the libraries here
 ULIBDIR =
  

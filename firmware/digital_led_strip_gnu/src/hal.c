@@ -114,6 +114,7 @@ void init()
 
   // USART
   USART_DeInit(USART1);
+  //USART_OverSampling8Cmd(USART1, ENABLE); // Enable 8x oversampling: turbo mode!
   USART_StructInit(&USART_InitStructure);
 
   USART_InitStructure.USART_BaudRate = USART_BAUD_RATE;

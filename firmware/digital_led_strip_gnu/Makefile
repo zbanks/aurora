@@ -118,7 +118,7 @@ ULIBDIR =
 ULIBS =
  
 # Define optimisation level here
-OPT = -O0
+OPT = -O3
  
 #
 # End of user defines
@@ -148,9 +148,9 @@ OBJS  = $(ASRC:.s=.o) $(SRC:.c=.o)
 LIBS    = $(DLIBS) $(ULIBS)
 MCFLAGS = -mcpu=$(MCU)
  
-ASFLAGS = $(MCFLAGS) -g -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) $(ADEFS)
-CPFLAGS = $(MCFLAGS) $(OPT) -g -std=c99 -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
-LDFLAGS = $(MCFLAGS) -g -mthumb -nostartfiles -T$(LDSCRIPT) -Wl,-Map=$(FULL_PRJ).map,--cref,--no-warn-mismatch $(LIBDIR)
+ASFLAGS = $(MCFLAGS) -gdwarf-2 -mthumb  -Wa,-amhls=$(<:.s=.lst) $(ADEFS)
+CPFLAGS = $(MCFLAGS) $(OPT) -std=c99 -gdwarf-2 -mthumb   -fomit-frame-pointer -Wall -Wstrict-prototypes -fverbose-asm -Wa,-ahlms=$(<:.c=.lst) $(DEFS)
+LDFLAGS = $(MCFLAGS) -mthumb -nostartfiles -T$(LDSCRIPT) -Wl,-Map=$(FULL_PRJ).map,--cref,--no-warn-mismatch $(LIBDIR)
  
 # Generate dependency information
 CPFLAGS += -MD -MP -MF .dep/$(@F).d

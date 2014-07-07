@@ -1,355 +1,398 @@
-# EESchema Netlist Version 1.1 created  Sun 05 Jan 2014 09:47:33 AM EST
-(
- ( /52C96FAA $noname  R4 10K {Lib=R}
-  (    1 +12V )
-  (    2 N-000027 )
- )
- ( /52C96FA6 $noname  R3 270 {Lib=R}
-  (    1 +3.3V )
-  (    2 N-000029 )
- )
- ( /52C96EA4 $noname  R2 270 {Lib=R}
-  (    1 N-000026 )
-  (    2 +3.3V )
- )
- ( /52C96EA2 $noname  R1 270 {Lib=R}
-  (    1 N-000030 )
-  (    2 +3.3V )
- )
- ( /52C96E8D $noname  D2 RX {Lib=LED}
-  (    1 N-000026 )
-  (    2 N-000019 )
- )
- ( /52C96E89 $noname  D1 TX {Lib=LED}
-  (    1 N-000030 )
-  (    2 N-000017 )
- )
- ( /52C96E6C $noname  D4 12V {Lib=LED}
-  (    1 N-000027 )
-  (    2 GND )
- )
- ( /52C96E6A $noname  D3 PWR {Lib=LED}
-  (    1 N-000029 )
-  (    2 GND )
- )
- ( /52C956C8 $noname  P1 CONN_1 {Lib=CONN_1}
-  (    1 N-000021 )
- )
- ( /52C95496 $noname  P3 CONN_2 {Lib=CONN_2}
-  (    1 +12V )
-  (    2 GND )
- )
- ( /52C953E1 $noname  GS1 GS3 {Lib=GS3}
-  (    1 VDD )
-  (    2 N-000011 )
-  (    3 N-000024 )
- )
- ( /52C94DE5 $noname  C2 1uF {Lib=C}
-  (    1 +12V )
-  (    2 GND )
- )
- ( /52C94DE0 $noname  C1 47uF {Lib=C}
-  (    1 +12V )
-  (    2 GND )
- )
- ( /52C9341C $noname  C8 10uF {Lib=C}
-  (    1 +12V )
-  (    2 GND )
- )
- ( /52C933D6 $noname  U5 LD1117 {Lib=AP1117}
-  (    1 GND )
-  (    2 +5V )
-  (    3 +12V )
- )
- ( /52C9329E $noname  C6 1uF {Lib=C}
-  (    1 +5V )
-  (    2 GND )
- )
- ( /52C9328D $noname  C7 1uF {Lib=C}
-  (    1 +3.3V )
-  (    2 GND )
- )
- ( /52C9324F $noname  U4 AP7333 {Lib=AP1117}
-  (    1 GND )
-  (    2 +3.3V )
-  (    3 +5V )
- )
- ( /52C90D6A MODULE  U1 AURORA_CARD {Lib=AURORA_CARD}
-  (    1 GND )
-  (    2 /TX )
-  (    3 /RX )
-  (    4 /RTS )
-  (    5 GND )
-  (    6 GND )
-  (    7 GND )
-  (    8 GND )
-  (    9 +12V )
-  (   10 +12V )
-  (   11 +12V )
-  (   12 +12V )
-  (   13 +5V )
-  (   14 +5V )
-  (   15 +3.3V )
-  (   16 GND )
- )
- ( /52C8F673 $noname  C3 10uF {Lib=C}
-  (    1 VDD )
-  (    2 GND )
- )
- ( /52C8F64B $noname  C5 100nF {Lib=C}
-  (    1 N-000024 )
-  (    2 GND )
- )
- ( /52C8F276 $noname  U2 MICRO-B_USB {Lib=MICRO-B_USB}
-  (    1 VDD )
-  (    2 N-000015 )
-  (    3 N-000014 )
-  (    4 ? )
-  (    5 GND )
- )
- ( /52C8F1FB $noname  U3 FT232RL {Lib=FT232RL}
-  (    1 /TX )
-  (    2 ? )
-  (    3 /RTS )
-  (    4 N-000011 )
-  (    5 /RX )
-  (    6 ? )
-  (    7 GND )
-  (    9 ? )
-  (   10 ? )
-  (   11 N-000021 )
-  (   12 ? )
-  (   13 ? )
-  (   14 ? )
-  (   15 N-000014 )
-  (   16 N-000015 )
-  (   17 N-000024 )
-  (   18 GND )
-  (   19 ? )
-  (   20 VDD )
-  (   21 GND )
-  (   22 N-000019 )
-  (   23 N-000017 )
-  (   25 GND )
-  (   26 GND )
-  (   27 ? )
-  (   28 ? )
- )
-)
-*
-{ Allowed footprints by component:
-$component R4
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R3
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R2
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component R1
- R?
- SM0603
- SM0805
- R?-*
- SM1206
-$endlist
-$component D2
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D1
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D4
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component D3
- LED-3MM
- LED-5MM
- LED-10MM
- LED-0603
- LED-0805
- LED-1206
- LEDV
-$endlist
-$component C2
- SM*
- C?
- C1-1
-$endlist
-$component C1
- SM*
- C?
- C1-1
-$endlist
-$component C8
- SM*
- C?
- C1-1
-$endlist
-$component U5
- SOT223
- TO252
- SOT89
- TO263
- TO220
-$endlist
-$component C6
- SM*
- C?
- C1-1
-$endlist
-$component C7
- SM*
- C?
- C1-1
-$endlist
-$component U4
- SOT223
- TO252
- SOT89
- TO263
- TO220
-$endlist
-$component C3
- SM*
- C?
- C1-1
-$endlist
-$component C5
- SM*
- C?
- C1-1
-$endlist
-$endfootprintlist
-}
-{ Pin List by Nets
-Net 1 "+5V" "+5V"
- U1 14
- U1 13
- U4 3
- C6 1
- U5 2
-Net 2 "+3.3V" "+3.3V"
- R1 2
- R2 2
- R3 1
- U1 15
- C7 1
- U4 2
-Net 3 "GND" "GND"
- C5 2
- U3 21
- U5 1
- U1 5
- U3 25
- U3 26
- U3 18
- U1 16
- U3 7
- D3 2
- U1 1
- C3 2
- U1 6
- U1 7
- U1 8
- D4 2
- C7 2
- U4 1
- C8 2
- C6 2
- U2 5
- P3 2
- C2 2
- C1 2
-Net 11 "" ""
- GS1 2
- U3 4
-Net 12 "/RTS" "RTS"
- U3 3
- U1 4
-Net 14 "" ""
- U2 3
- U3 15
-Net 15 "" ""
- U2 2
- U3 16
-Net 17 "" ""
- U3 23
- D1 2
-Net 19 "" ""
- D2 2
- U3 22
-Net 21 "" ""
- U3 11
- P1 1
-Net 22 "/RX" "RX"
- U1 3
- U3 5
-Net 23 "/TX" "TX"
- U3 1
- U1 2
-Net 24 "" ""
- U3 17
- GS1 3
- C5 1
-Net 25 "VDD" "VDD"
- GS1 1
- U3 20
- U2 1
- C3 1
-Net 26 "" ""
- D2 1
- R2 1
-Net 27 "" ""
- D4 1
- R4 2
-Net 28 "+12V" "+12V"
- P3 1
- R4 1
- C2 1
- C1 1
- C8 1
- U5 3
- U1 9
- U1 10
- U1 11
- U1 12
-Net 29 "" ""
- R3 2
- D3 1
-Net 30 "" ""
- R1 1
- D1 1
-}
-#End
+(export (version D)
+  (design
+    (source /home/zbanks/aurora/usb_sub/usb_sub.sch)
+    (date "Mon 07 Jul 2014 12:57:20 PM EDT")
+    (tool "eeschema (2014-01-30 BZR 4648)-product"))
+  (components
+    (comp (ref R4)
+      (value 10K)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96FAA))
+    (comp (ref R3)
+      (value 270)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96FA6))
+    (comp (ref R2)
+      (value 270)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96EA4))
+    (comp (ref R1)
+      (value 270)
+      (libsource (lib device) (part R))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96EA2))
+    (comp (ref D2)
+      (value RX)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96E8D))
+    (comp (ref D1)
+      (value TX)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96E89))
+    (comp (ref D4)
+      (value 12V)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96E6C))
+    (comp (ref D3)
+      (value PWR)
+      (libsource (lib device) (part LED))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C96E6A))
+    (comp (ref P3)
+      (value CONN_2)
+      (libsource (lib conn) (part CONN_2))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C95496))
+    (comp (ref GS1)
+      (value GS3)
+      (libsource (lib conn) (part GS3))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C953E1))
+    (comp (ref C2)
+      (value 1uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C94DE5))
+    (comp (ref C1)
+      (value 47uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C94DE0))
+    (comp (ref C8)
+      (value 10uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C9341C))
+    (comp (ref U5)
+      (value LD1117)
+      (libsource (lib open-project) (part AP1117))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C933D6))
+    (comp (ref C6)
+      (value 1uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C9329E))
+    (comp (ref C7)
+      (value 1uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C9328D))
+    (comp (ref U4)
+      (value AP7333)
+      (libsource (lib open-project) (part AP1117))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C9324F))
+    (comp (ref U1)
+      (value AURORA_CARD)
+      (footprint MODULE)
+      (datasheet DOCUMENTATION)
+      (libsource (lib AURORA_CARD) (part AURORA_CARD))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C90D6A))
+    (comp (ref C3)
+      (value 10uF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C8F673))
+    (comp (ref C5)
+      (value 100nF)
+      (libsource (lib device) (part C))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C8F64B))
+    (comp (ref U2)
+      (value MICRO-B_USB)
+      (libsource (lib open-project) (part MICRO-B_USB))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 52C8F276))
+    (comp (ref GS2)
+      (value GS3)
+      (libsource (lib conn) (part GS3))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 53B4301E))
+    (comp (ref U3)
+      (value FT232RQ)
+      (libsource (lib interface) (part FT232RQ))
+      (sheetpath (names /) (tstamps /))
+      (tstamp 53BAD3C0)))
+  (libparts
+    (libpart (lib device) (part C)
+      (description "Condensateur non polarise")
+      (footprints
+        (fp SM*)
+        (fp C?)
+        (fp C1-1))
+      (fields
+        (field (name Reference) C)
+        (field (name Value) C))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib device) (part LED)
+      (footprints
+        (fp LED-3MM)
+        (fp LED-5MM)
+        (fp LED-10MM)
+        (fp LED-0603)
+        (fp LED-0805)
+        (fp LED-1206)
+        (fp LEDV))
+      (fields
+        (field (name Reference) D)
+        (field (name Value) LED))
+      (pins
+        (pin (num 1) (name A) (type passive))
+        (pin (num 2) (name K) (type passive))))
+    (libpart (lib device) (part R)
+      (description Resistance)
+      (footprints
+        (fp R?)
+        (fp SM0603)
+        (fp SM0805)
+        (fp R?-*)
+        (fp SM1206))
+      (fields
+        (field (name Reference) R)
+        (field (name Value) R))
+      (pins
+        (pin (num 1) (name ~) (type passive))
+        (pin (num 2) (name ~) (type passive))))
+    (libpart (lib conn) (part CONN_2)
+      (description "Symbole general de connecteur")
+      (fields
+        (field (name Reference) P)
+        (field (name Value) CONN_2))
+      (pins
+        (pin (num 1) (name P1) (type passive))
+        (pin (num 2) (name PM) (type passive))))
+    (libpart (lib conn) (part GS3)
+      (fields
+        (field (name Reference) GS)
+        (field (name Value) GS3)
+        (field (name Footprint) GS3))
+      (pins
+        (pin (num 1) (name G1) (type passive))
+        (pin (num 2) (name G2) (type passive))
+        (pin (num 3) (name G3) (type passive))))
+    (libpart (lib AURORA_CARD) (part AURORA_CARD)
+      (fields
+        (field (name Reference) CONN)
+        (field (name Value) AURORA_CARD)
+        (field (name Footprint) MODULE)
+        (field (name Datasheet) DOCUMENTATION))
+      (pins
+        (pin (num 1) (name GND) (type BiDi))
+        (pin (num 2) (name DOMI) (type BiDi))
+        (pin (num 3) (name DIMO) (type BiDi))
+        (pin (num 4) (name RTS) (type BiDi))
+        (pin (num 5) (name GND) (type BiDi))
+        (pin (num 6) (name GND) (type BiDi))
+        (pin (num 7) (name GND) (type BiDi))
+        (pin (num 8) (name GND) (type BiDi))
+        (pin (num 9) (name 12V) (type BiDi))
+        (pin (num 10) (name 12V) (type BiDi))
+        (pin (num 11) (name 12V) (type BiDi))
+        (pin (num 12) (name 12V) (type BiDi))
+        (pin (num 13) (name 5V) (type BiDi))
+        (pin (num 14) (name 5V) (type BiDi))
+        (pin (num 15) (name 3V3) (type BiDi))
+        (pin (num 16) (name GND) (type BiDi))))
+    (libpart (lib interface) (part FT232RQ)
+      (fields
+        (field (name Reference) U)
+        (field (name Value) FT232RQ))
+      (pins
+        (pin (num 1) (name VCCIO) (type input))
+        (pin (num 2) (name RXD) (type input))
+        (pin (num 3) (name ~RI) (type input))
+        (pin (num 4) (name GND) (type input))
+        (pin (num 6) (name ~DSR) (type input))
+        (pin (num 7) (name ~DCD) (type input))
+        (pin (num 8) (name ~CTS) (type input))
+        (pin (num 9) (name CBUS4) (type input))
+        (pin (num 10) (name CBUS2) (type input))
+        (pin (num 11) (name CBUS3) (type input))
+        (pin (num 14) (name USBDP) (type input))
+        (pin (num 15) (name USBDM) (type input))
+        (pin (num 16) (name 3v3_OUT) (type input))
+        (pin (num 17) (name GND) (type input))
+        (pin (num 18) (name ~RESET) (type input))
+        (pin (num 19) (name VCC) (type input))
+        (pin (num 20) (name GND) (type input))
+        (pin (num 21) (name CBUS1) (type input))
+        (pin (num 22) (name CBUS0) (type input))
+        (pin (num 24) (name AGND) (type input))
+        (pin (num 26) (name TEST) (type input))
+        (pin (num 27) (name OSCI) (type input))
+        (pin (num 28) (name OSCO) (type input))
+        (pin (num 30) (name TXD) (type input))
+        (pin (num 31) (name ~DTR) (type input))
+        (pin (num 32) (name ~RTS) (type input))
+        (pin (num 33) (name GND) (type input))))
+    (libpart (lib open-project) (part AP1117)
+      (description "LDO linear regulator")
+      (footprints
+        (fp SOT223)
+        (fp TO252)
+        (fp SOT89)
+        (fp TO263)
+        (fp TO220))
+      (fields
+        (field (name Reference) U)
+        (field (name Value) AP1117))
+      (pins
+        (pin (num 1) (name ADJ/GND) (type input))
+        (pin (num 2) (name VOUT) (type power_out))
+        (pin (num 3) (name VIN) (type input))))
+    (libpart (lib open-project) (part MICRO-B_USB)
+      (description "Micro-B USB connector")
+      (fields
+        (field (name Reference) U)
+        (field (name Value) MICRO-B_USB))
+      (pins
+        (pin (num 1) (name VBUS) (type input))
+        (pin (num 2) (name D-) (type input))
+        (pin (num 3) (name D+) (type input))
+        (pin (num 4) (name ID) (type input))
+        (pin (num 5) (name GND) (type input)))))
+  (libraries
+    (library (logical device)
+      (uri /usr/local/share/kicad/library/device.lib))
+    (library (logical conn)
+      (uri /usr/local/share/kicad/library/conn.lib))
+    (library (logical interface)
+      (uri /usr/local/share/kicad/library/interface.lib))
+    (library (logical AURORA_CARD)
+      (uri /home/zbanks/aurora/kicad_parts/AURORA_CARD.lib))
+    (library (logical open-project)
+      (uri /home/zbanks/kicadlibrary/open-project.lib)))
+  (nets
+    (net (code 1) (name GND)
+      (node (ref C6) (pin 2))
+      (node (ref C7) (pin 2))
+      (node (ref U4) (pin 1))
+      (node (ref C2) (pin 2))
+      (node (ref U3) (pin 33))
+      (node (ref U2) (pin 5))
+      (node (ref U3) (pin 24))
+      (node (ref U1) (pin 8))
+      (node (ref U3) (pin 20))
+      (node (ref U3) (pin 4))
+      (node (ref U3) (pin 26))
+      (node (ref U3) (pin 17))
+      (node (ref C5) (pin 2))
+      (node (ref U1) (pin 16))
+      (node (ref C3) (pin 2))
+      (node (ref U1) (pin 1))
+      (node (ref U1) (pin 5))
+      (node (ref U1) (pin 6))
+      (node (ref U1) (pin 7))
+      (node (ref D3) (pin 2))
+      (node (ref D4) (pin 2))
+      (node (ref U5) (pin 1))
+      (node (ref C8) (pin 2))
+      (node (ref P3) (pin 2))
+      (node (ref C1) (pin 2)))
+    (net (code 2) (name /RTS)
+      (node (ref U3) (pin 32))
+      (node (ref U1) (pin 4)))
+    (net (code 3) (name /TX)
+      (node (ref U1) (pin 2))
+      (node (ref U3) (pin 30)))
+    (net (code 4) (name /RX)
+      (node (ref U3) (pin 2))
+      (node (ref U1) (pin 3)))
+    (net (code 5) (name VDD)
+      (node (ref U3) (pin 19))
+      (node (ref GS1) (pin 1))
+      (node (ref C3) (pin 1))
+      (node (ref GS2) (pin 1))
+      (node (ref U2) (pin 1)))
+    (net (code 6) (name +5V)
+      (node (ref C6) (pin 1))
+      (node (ref U4) (pin 3))
+      (node (ref U5) (pin 2))
+      (node (ref GS2) (pin 3)))
+    (net (code 7) (name +12V)
+      (node (ref U1) (pin 12))
+      (node (ref U1) (pin 10))
+      (node (ref U1) (pin 11))
+      (node (ref C2) (pin 1))
+      (node (ref P3) (pin 1))
+      (node (ref C1) (pin 1))
+      (node (ref U5) (pin 3))
+      (node (ref R4) (pin 1))
+      (node (ref C8) (pin 1))
+      (node (ref U1) (pin 9)))
+    (net (code 8) (name +3.3V)
+      (node (ref R2) (pin 2))
+      (node (ref R1) (pin 2))
+      (node (ref R3) (pin 1))
+      (node (ref C7) (pin 1))
+      (node (ref U1) (pin 15))
+      (node (ref U4) (pin 2)))
+    (net (code 9) (name "Net-(U3-Pad28)")
+      (node (ref U3) (pin 28)))
+    (net (code 10) (name "Net-(U3-Pad18)")
+      (node (ref U3) (pin 18)))
+    (net (code 11) (name "Net-(U3-Pad27)")
+      (node (ref U3) (pin 27)))
+    (net (code 12) (name "Net-(U3-Pad8)")
+      (node (ref U3) (pin 8)))
+    (net (code 13) (name "Net-(U2-Pad4)")
+      (node (ref U2) (pin 4)))
+    (net (code 14) (name "Net-(U3-Pad9)")
+      (node (ref U3) (pin 9)))
+    (net (code 15) (name "Net-(U3-Pad11)")
+      (node (ref U3) (pin 11)))
+    (net (code 16) (name "Net-(U3-Pad10)")
+      (node (ref U3) (pin 10)))
+    (net (code 17) (name "Net-(U3-Pad3)")
+      (node (ref U3) (pin 3)))
+    (net (code 18) (name "Net-(U3-Pad7)")
+      (node (ref U3) (pin 7)))
+    (net (code 19) (name "Net-(U3-Pad6)")
+      (node (ref U3) (pin 6)))
+    (net (code 20) (name "Net-(U3-Pad31)")
+      (node (ref U3) (pin 31)))
+    (net (code 21) (name "Net-(U2-Pad3)")
+      (node (ref U2) (pin 3))
+      (node (ref U3) (pin 14)))
+    (net (code 22) (name "Net-(U2-Pad2)")
+      (node (ref U2) (pin 2))
+      (node (ref U3) (pin 15)))
+    (net (code 23) (name "Net-(D1-Pad2)")
+      (node (ref U3) (pin 22))
+      (node (ref D1) (pin 2)))
+    (net (code 24) (name "Net-(D2-Pad2)")
+      (node (ref D2) (pin 2))
+      (node (ref U3) (pin 21)))
+    (net (code 25) (name "Net-(GS1-Pad2)")
+      (node (ref GS1) (pin 2))
+      (node (ref U3) (pin 1)))
+    (net (code 26) (name "Net-(GS2-Pad2)")
+      (node (ref GS2) (pin 2))
+      (node (ref U1) (pin 14))
+      (node (ref U1) (pin 13)))
+    (net (code 27) (name "Net-(D2-Pad1)")
+      (node (ref R2) (pin 1))
+      (node (ref D2) (pin 1)))
+    (net (code 28) (name "Net-(D4-Pad1)")
+      (node (ref D4) (pin 1))
+      (node (ref R4) (pin 2)))
+    (net (code 29) (name "Net-(D1-Pad1)")
+      (node (ref R1) (pin 1))
+      (node (ref D1) (pin 1)))
+    (net (code 30) (name "Net-(C5-Pad1)")
+      (node (ref C5) (pin 1))
+      (node (ref U3) (pin 16))
+      (node (ref GS1) (pin 3)))
+    (net (code 31) (name "Net-(D3-Pad1)")
+      (node (ref R3) (pin 2))
+      (node (ref D3) (pin 1)))))

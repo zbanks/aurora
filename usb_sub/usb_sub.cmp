@@ -1,17 +1,24 @@
-Cmp-Mod V01 Created by CvPcb (2014-01-30 BZR 4648)-product date = Thu 03 Jul 2014 12:02:06 PM EDT
+Cmp-Mod V01 Created by CvPcb (2014-01-30 BZR 4648)-product date = Sun 20 Jul 2014 05:43:40 PM EDT
+
+BeginCmp
+TimeStamp = /53B4301E;
+Reference = GS2;
+ValeurCmp = GS3;
+IdModule  = Connect:GS3;
+EndCmp
 
 BeginCmp
 TimeStamp = /52C953E1;
 Reference = GS1;
 ValeurCmp = GS3;
-IdModule  = S_JUMPER_3;
+IdModule  = Connect:GS3;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C8F1FB;
+TimeStamp = /53BAD3C0;
 Reference = U3;
-ValeurCmp = FT232RL;
-IdModule  = SSOP28;
+ValeurCmp = FT232RQ;
+IdModule  = SMD_Packages:QFN32-5x5;
 EndCmp
 
 BeginCmp
@@ -32,84 +39,84 @@ BeginCmp
 TimeStamp = /52C94DE0;
 Reference = C1;
 ValeurCmp = 47uF;
-IdModule  = SM1206;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C8F673;
-Reference = C3;
-ValeurCmp = 10uF;
-IdModule  = SM0805;
+IdModule  = Capacitors_SMD:c_1206;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C9341C;
 Reference = C8;
 ValeurCmp = 10uF;
-IdModule  = SM0805;
+IdModule  = Capacitors_SMD:c_0805;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C94DE5;
-Reference = C2;
-ValeurCmp = 1uF;
-IdModule  = SM0603_Capa;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C9328D;
-Reference = C7;
-ValeurCmp = 1uF;
-IdModule  = SM0603_Capa;
+TimeStamp = /52C8F673;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:c_0805;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C9329E;
 Reference = C6;
 ValeurCmp = 1uF;
-IdModule  = SM0603_Capa;
+IdModule  = Capacitors_SMD:c_0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C8F64B;
 Reference = C5;
 ValeurCmp = 100nF;
-IdModule  = SM0603_Capa;
+IdModule  = Capacitors_SMD:c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C94DE5;
+Reference = C2;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9328D;
+Reference = C7;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:c_0603;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C96EA2;
 Reference = R1;
 ValeurCmp = 270;
-IdModule  = SM0603;
+IdModule  = SMD_Packages:SM0402_r;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C96EA4;
 Reference = R2;
 ValeurCmp = 270;
-IdModule  = SM0603;
+IdModule  = SMD_Packages:SM0402_r;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C96FA6;
 Reference = R3;
 ValeurCmp = 270;
-IdModule  = SM0603;
+IdModule  = SMD_Packages:SM0402_r;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C96FAA;
 Reference = R4;
 ValeurCmp = 10K;
-IdModule  = SM0603;
+IdModule  = SMD_Packages:SM0402_r;
 EndCmp
 
 BeginCmp
 TimeStamp = /52C8F276;
 Reference = U2;
 ValeurCmp = MICRO-B_USB;
-IdModule  = MICRO-B_USB;
+IdModule  = Connect:USB_MINI_B;
 EndCmp
 
 BeginCmp
@@ -152,20 +159,6 @@ TimeStamp = /52C90D6A;
 Reference = U1;
 ValeurCmp = AURORA_CARD;
 IdModule  = AURORA_CARD;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C956C8;
-Reference = P1;
-ValeurCmp = CONN_1;
-IdModule  = 1PIN_S_SMD;
-EndCmp
-
-BeginCmp
-TimeStamp = /53B4301E;
-Reference = GS2;
-ValeurCmp = GS3;
-IdModule  = S_JUMPER_3;
 EndCmp
 
 EndListe

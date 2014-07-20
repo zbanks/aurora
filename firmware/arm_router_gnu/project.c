@@ -216,7 +216,7 @@ main(void)
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, 0);
 
         // Delay for a while.
-        ROM_SysCtlDelay(1000000);
+        ROM_SysCtlDelay(4000000);
 
         // Set the GPIO low.
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, 0);

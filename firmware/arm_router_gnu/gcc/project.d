@@ -9,6 +9,8 @@ gcc/project.o: project.c \
  /home/zbanks/gcc-arm-none-eabi/arm-none-eabi/include/sys/features.h \
  /home/zbanks/tivaware/inc/hw_ints.h \
  /home/zbanks/tivaware/inc/hw_memmap.h \
+ /home/zbanks/tivaware/inc/hw_sysctl.h \
+ /home/zbanks/tivaware/inc/hw_types.h /home/zbanks/tivaware/inc/hw_gpio.h \
  /home/zbanks/tivaware/driverlib/debug.h \
  /home/zbanks/tivaware/driverlib/gpio.h \
  /home/zbanks/tivaware/driverlib/interrupt.h \

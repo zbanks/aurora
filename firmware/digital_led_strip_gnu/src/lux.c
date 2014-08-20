@@ -30,7 +30,7 @@ luxframe_t* lux_usart_poll(){
     static uint8_t lux_frame_nextzero;
     int16_t data;
     while((data = get_char()) != -1){
-        set_led(1);
+        //set_led(1);
         // Start of frame
         if(data == 0){
             // Next byte is the position of the first zero (COBS)
@@ -73,7 +73,7 @@ luxframe_t* lux_usart_poll(){
         // The data is all recieved
         if(lux_frame_idx >= (lux_frame.length + 4)){
             // Compare calcualted CRC with incoming byte
-            if(lux_frame_crc == data || 1){
+            if((lux_frame_crc == data) || 1){
                 // Return length of buffer
                 return &lux_frame;
             }
@@ -89,7 +89,7 @@ luxframe_t* lux_usart_poll(){
         }
 
     }
-    set_led(0);
+    //set_led(0);
     return NULL; // Frame not complete
 }
 

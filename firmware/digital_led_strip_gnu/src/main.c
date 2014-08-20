@@ -5,8 +5,8 @@
 //#include "dmx.h"
 
 #define STRIP_LENGTH (STRIP_PIXELS)
-#define DEVICE_ADDRESS      (0x00)
-#define DEVICE_ADDRESS_MASK (0x00)
+#define DEVICE_ADDRESS      (0x80)
+#define DEVICE_ADDRESS_MASK (0x80)
 
 //#define MODE_BESPECKLE
 
@@ -20,7 +20,12 @@
 #define MIN(a, b) ((a < b) ? a : b)
 
 int main(void) {
-    uint8_t btn;
+    char a[] = "aaa\n";
+
+    init();
+    for(int i=0;i<STRIP_LENGTH;i++){
+        strip_data[i]=pack_RGB(2,0,0);
+    }
 
     #ifdef MODE_BESPECKLE
         canpacket_t msg1 = {0x03, 'a', {0x80, 20, 30, 0x00, 0x00, 0x00}};
@@ -28,10 +33,9 @@ int main(void) {
         message(&msg1);
         message(&msg_tick);
 
-        init();
         init_effects_heap();
         for(int i=0;i<STRIP_LENGTH;i++){
-            strip_data[i]=pack_RGB(5,0,0);
+            strip_data[i]=pack_RGB(0,0,5);
         }
         strip_refresh();
         populate_strip(strip_data);
@@ -48,9 +52,9 @@ int main(void) {
         luxframe_t* luxframe;
 
         luxframe = lux_usart_poll();
-        set_led(0);
         if(luxframe){
-            if(luxframe->address & DEVICE_ADDRESS_MASK == DEVICE_ADDRESS & DEVICE_ADDRESS_MASK){
+            if((luxframe->address & DEVICE_ADDRESS_MASK) == (DEVICE_ADDRESS & DEVICE_ADDRESS_MASK)){
+                set_led(luxframe->address & 1);
                 //Example
                 #ifdef MODE_BESPECKLE
                 if(luxframe->length >= 8){
@@ -65,7 +69,7 @@ int main(void) {
                 #endif
 
                 #ifdef MODE_DMX
-                set_led(1);
+                //set_led(1);
                 memcpy(strip_data, luxframe->data, MIN(STRIP_LENGTH, luxframe->length));
                 strip_refresh();
                 #endif

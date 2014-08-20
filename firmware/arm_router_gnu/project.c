@@ -42,6 +42,9 @@
 #include <stdint.h>
 #include "inc/hw_ints.h"
 #include "inc/hw_memmap.h"
+#include "inc/hw_sysctl.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
 #include "driverlib/debug.h"
 #include "driverlib/gpio.h"
 #include "driverlib/interrupt.h"
@@ -52,6 +55,7 @@
 
 #include "lux.h"
 
+#define GPIO_LOCK_KEY_DD        0x4C4F434B
 //*****************************************************************************
 //
 //! \addtogroup example_list
@@ -134,8 +138,14 @@ void UpstreamUARTIntHandler(void) {
         if(lframe){
             lux_calculate_crc(lframe);
             lux_serialize(lframe, lbuffer);
-            UARTSend(UART1_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART0_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART1_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART2_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART3_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART4_BASE, lbuffer, lframe->length + 6);
             UARTSend(UART5_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART6_BASE, lbuffer, lframe->length + 6);
+            //UARTSend(UART7_BASE, lbuffer, lframe->length + 6);
         }
         // Blink the LED to show a character transfer is occuring.
         GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, GPIO_PIN_6);
@@ -166,31 +176,98 @@ main(void)
     //
     // Enable the peripherals used by this example.
     //
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART0);
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART1);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART2);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART3);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART4);
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART5);
-    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART6);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_UART7);
+
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOA);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
+    //ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
 
     // Enable processor interrupts.
     ROM_IntMasterEnable();
 
-    // Set GPIO A0 and A1 as UART pins.
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_5); 
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6); 
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_7);
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_7);
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTE_BASE, GPIO_PIN_5);
+    //
+    GPIOPinConfigure(GPIO_PA0_U0RX);
+    GPIOPinConfigure(GPIO_PA1_U0TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTA_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    ROM_UARTConfigSetExpClk(UART0_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
     GPIOPinConfigure(GPIO_PB0_U1RX);
     GPIOPinConfigure(GPIO_PB1_U1TX);
     ROM_GPIOPinTypeUART(GPIO_PORTB_BASE, GPIO_PIN_0 | GPIO_PIN_1);
-
-    // Configure the UART for 9600, 8-N-1 operation.
     ROM_UARTConfigSetExpClk(UART1_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
 
+    GPIOPinConfigure(GPIO_PD6_U2RX);
+    HWREG(GPIO_PORTD_BASE + GPIO_O_LOCK) = GPIO_LOCK_KEY_DD;
+    HWREG(GPIO_PORTD_BASE + GPIO_O_CR) = 0xFF;
+    GPIOPinConfigure(GPIO_PD7_U2TX);
+    HWREG(GPIO_PORTD_BASE + GPIO_O_CR) = 0x7F;
+    HWREG(GPIO_PORTD_BASE + GPIO_O_LOCK) = GPIO_LOCK_M;
+    ROM_GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_6 | GPIO_PIN_7);
+    ROM_UARTConfigSetExpClk(UART2_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
 
-    // 
+    GPIOPinConfigure(GPIO_PC6_U3RX);
+    GPIOPinConfigure(GPIO_PC7_U3TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTC_BASE, GPIO_PIN_6 | GPIO_PIN_7);
+    ROM_UARTConfigSetExpClk(UART3_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
+    GPIOPinConfigure(GPIO_PC4_U4RX);
+    GPIOPinConfigure(GPIO_PC5_U4TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTC_BASE, GPIO_PIN_4 | GPIO_PIN_5);
+    ROM_UARTConfigSetExpClk(UART4_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
     GPIOPinConfigure(GPIO_PE4_U5RX);
+    HWREG(GPIO_PORTE_BASE + GPIO_O_LOCK) = GPIO_LOCK_KEY_DD;
+    HWREG(GPIO_PORTE_BASE + GPIO_O_CR) = 0xFF;
     GPIOPinConfigure(GPIO_PE5_U5TX);
+    HWREG(GPIO_PORTD_BASE + GPIO_O_CR) = 0xDF;
+    HWREG(GPIO_PORTD_BASE + GPIO_O_LOCK) = GPIO_LOCK_M;
+
     ROM_GPIOPinTypeUART(GPIO_PORTE_BASE, GPIO_PIN_4 | GPIO_PIN_5);
     ROM_UARTConfigSetExpClk(UART5_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
-    //ROM_IntEnable(INT_UART5);
-    //ROM_UARTIntEnable(UART5_BASE, UART_INT_RX | UART_INT_RT);
+
+    GPIOPinConfigure(GPIO_PD4_U6RX);
+    GPIOPinConfigure(GPIO_PD5_U6TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_4 | GPIO_PIN_5);
+    ROM_UARTConfigSetExpClk(UART6_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
+    GPIOPinConfigure(GPIO_PE0_U7RX);
+    GPIOPinConfigure(GPIO_PE1_U7TX);
+    ROM_GPIOPinTypeUART(GPIO_PORTD_BASE, GPIO_PIN_0 | GPIO_PIN_1);
+    ROM_UARTConfigSetExpClk(UART7_BASE, ROM_SysCtlClockGet(), 115200, (UART_CONFIG_WLEN_8 | UART_CONFIG_STOP_ONE | UART_CONFIG_PAR_NONE));
+
+
+    ROM_SysCtlDelay(4000000);
+    while(1){
+        ROM_UARTCharPut(UART0_BASE, 0x55);
+        //ROM_UARTCharPut(UART1_BASE, 0x55);
+        ROM_UARTCharPut(UART2_BASE, 0x55);
+        ROM_UARTCharPut(UART3_BASE, 0x55);
+        ROM_UARTCharPut(UART4_BASE, 0x55);
+        ROM_UARTCharPut(UART5_BASE, 0x55);
+        ROM_UARTCharPut(UART6_BASE, 0x55);
+        ROM_UARTCharPut(UART7_BASE, 0x55);
+
+        //ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+        ROM_SysCtlDelay(1000000);
+        //ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
+        ROM_SysCtlDelay(100000);
+    }
 
 
     // Prompt for text to be entered.
@@ -206,6 +283,8 @@ main(void)
     // Enable the UART interrupt.
     ROM_IntEnable(INT_UART1);
     ROM_UARTIntEnable(UART1_BASE, UART_INT_RX | UART_INT_RT);
+    ROM_IntEnable(INT_UART5);
+    ROM_UARTIntEnable(UART5_BASE, UART_INT_RX | UART_INT_RT);
     //
     // Loop forever.
     //
@@ -215,12 +294,16 @@ main(void)
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, GPIO_PIN_6);
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, 0);
 
+        ROM_UARTCharPut(UART5_BASE, 0x55);
+        UARTSend(UART5_BASE, (uint8_t *)"\033[2JEnter text: ", 16);
+
         // Delay for a while.
         ROM_SysCtlDelay(4000000);
 
         // Set the GPIO low.
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, 0);
         ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, GPIO_PIN_7);
+        //ROM_UARTCharPut(UART5_BASE, 0x55);
 
         // Delay for a while.
         ROM_SysCtlDelay(1000000);

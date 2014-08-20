@@ -1,73 +1,10 @@
-Cmp-Mod V01 Created by CvPcb (2014-01-30 BZR 4648)-product date = Sun 20 Jul 2014 05:43:40 PM EDT
-
-BeginCmp
-TimeStamp = /53B4301E;
-Reference = GS2;
-ValeurCmp = GS3;
-IdModule  = Connect:GS3;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C953E1;
-Reference = GS1;
-ValeurCmp = GS3;
-IdModule  = Connect:GS3;
-EndCmp
-
-BeginCmp
-TimeStamp = /53BAD3C0;
-Reference = U3;
-ValeurCmp = FT232RQ;
-IdModule  = SMD_Packages:QFN32-5x5;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C9324F;
-Reference = U4;
-ValeurCmp = AP7333;
-IdModule  = SOT23;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C933D6;
-Reference = U5;
-ValeurCmp = LD1117;
-IdModule  = SOT223;
-EndCmp
+Cmp-Mod V01 Created by CvPcb (2014-01-30 BZR 4648)-product date = Sat 26 Jul 2014 04:00:56 PM EDT
 
 BeginCmp
 TimeStamp = /52C94DE0;
 Reference = C1;
 ValeurCmp = 47uF;
 IdModule  = Capacitors_SMD:c_1206;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C9341C;
-Reference = C8;
-ValeurCmp = 10uF;
-IdModule  = Capacitors_SMD:c_0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C8F673;
-Reference = C3;
-ValeurCmp = 10uF;
-IdModule  = Capacitors_SMD:c_0805;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C9329E;
-Reference = C6;
-ValeurCmp = 1uF;
-IdModule  = Capacitors_SMD:c_0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C8F64B;
-Reference = C5;
-ValeurCmp = 100nF;
-IdModule  = Capacitors_SMD:c_0603;
 EndCmp
 
 BeginCmp
@@ -78,10 +15,87 @@ IdModule  = Capacitors_SMD:c_0603;
 EndCmp
 
 BeginCmp
+TimeStamp = /52C8F673;
+Reference = C3;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C8F64B;
+Reference = C5;
+ValeurCmp = 100nF;
+IdModule  = Capacitors_SMD:c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9329E;
+Reference = C6;
+ValeurCmp = 1uF;
+IdModule  = Capacitors_SMD:c_0603;
+EndCmp
+
+BeginCmp
 TimeStamp = /52C9328D;
 Reference = C7;
 ValeurCmp = 1uF;
 IdModule  = Capacitors_SMD:c_0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C9341C;
+Reference = C8;
+ValeurCmp = 10uF;
+IdModule  = Capacitors_SMD:c_0805;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E89;
+Reference = D1;
+ValeurCmp = TX;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E8D;
+Reference = D2;
+ValeurCmp = RX;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E6A;
+Reference = D3;
+ValeurCmp = PWR;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C96E6C;
+Reference = D4;
+ValeurCmp = 12V;
+IdModule  = LED-0603;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C953E1;
+Reference = GS1;
+ValeurCmp = GS3;
+IdModule  = Connect:GS3;
+EndCmp
+
+BeginCmp
+TimeStamp = /53B4301E;
+Reference = GS2;
+ValeurCmp = GS3;
+IdModule  = Connect:GS3;
+EndCmp
+
+BeginCmp
+TimeStamp = /52C95496;
+Reference = P3;
+ValeurCmp = CONN_2;
+IdModule  = JACK_ALIM;
 EndCmp
 
 BeginCmp
@@ -113,6 +127,13 @@ IdModule  = SMD_Packages:SM0402_r;
 EndCmp
 
 BeginCmp
+TimeStamp = /52C90D6A;
+Reference = U1;
+ValeurCmp = AURORA_CARD;
+IdModule  = AURORA_CARD;
+EndCmp
+
+BeginCmp
 TimeStamp = /52C8F276;
 Reference = U2;
 ValeurCmp = MICRO-B_USB;
@@ -120,45 +141,24 @@ IdModule  = Connect:USB_MINI_B;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C96E8D;
-Reference = D2;
-ValeurCmp = RX;
-IdModule  = LED-0603;
+TimeStamp = /53BAD3C0;
+Reference = U3;
+ValeurCmp = FT232RQ;
+IdModule  = SMD_Packages:QFN32-5x5;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C96E6A;
-Reference = D3;
-ValeurCmp = PWR;
-IdModule  = LED-0603;
+TimeStamp = /52C9324F;
+Reference = U4;
+ValeurCmp = AP7333;
+IdModule  = SOT23;
 EndCmp
 
 BeginCmp
-TimeStamp = /52C96E6C;
-Reference = D4;
-ValeurCmp = 12V;
-IdModule  = LED-0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C96E89;
-Reference = D1;
-ValeurCmp = TX;
-IdModule  = LED-0603;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C95496;
-Reference = P3;
-ValeurCmp = CONN_2;
-IdModule  = JACK_ALIM;
-EndCmp
-
-BeginCmp
-TimeStamp = /52C90D6A;
-Reference = U1;
-ValeurCmp = AURORA_CARD;
-IdModule  = AURORA_CARD;
+TimeStamp = /52C933D6;
+Reference = U5;
+ValeurCmp = LD1117;
+IdModule  = SOT223;
 EndCmp
 
 EndListe

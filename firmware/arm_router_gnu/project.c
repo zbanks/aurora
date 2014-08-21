@@ -190,17 +190,30 @@ main(void)
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
     ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOE);
-    //ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
+    ROM_SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
 
     // Enable processor interrupts.
     ROM_IntMasterEnable();
 
-    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_5); 
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_5); 
     ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_6); 
     ROM_GPIOPinTypeGPIOOutput(GPIO_PORTB_BASE, GPIO_PIN_7);
     //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_2);
     //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_7);
     //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTE_BASE, GPIO_PIN_5);
+    //*
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_0); // RTS0
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_0); // RTS1
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_2); // RTS2
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE, GPIO_PIN_3); // RTS3
+    ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_4); // RTS4
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_5); // RTS5
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_6); // RTS6
+    //ROM_GPIOPinTypeGPIOOutput(GPIO_PORTA_BASE, GPIO_PIN_7); // RTS7
+    //*/
+
+
+
     //
     GPIOPinConfigure(GPIO_PA0_U0RX);
     GPIOPinConfigure(GPIO_PA1_U0TX);
@@ -253,6 +266,16 @@ main(void)
 
 
     ROM_SysCtlDelay(4000000);
+    /*
+    ROM_GPIOPinWrite(GPIO_PORTD_BASE, GPIO_PIN_0, GPIO_PIN_0); // RTS0
+    ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_0, GPIO_PIN_0); // RTS1
+    ROM_GPIOPinWrite(GPIO_PORTD_BASE, GPIO_PIN_2, GPIO_PIN_2); // RTS2
+    ROM_GPIOPinWrite(GPIO_PORTD_BASE, GPIO_PIN_3, GPIO_PIN_3); // RTS3
+    ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_4, GPIO_PIN_4); // RTS4
+    ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_5, GPIO_PIN_5); // RTS5
+    ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_6, GPIO_PIN_6); // RTS6
+    ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_7, GPIO_PIN_7); // RTS7
+    //*/
     while(1){
         ROM_UARTCharPut(UART0_BASE, 0x55);
         //ROM_UARTCharPut(UART1_BASE, 0x55);
@@ -264,8 +287,14 @@ main(void)
         ROM_UARTCharPut(UART7_BASE, 0x55);
 
         //ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, GPIO_PIN_2);
+    //ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_4, 0xFF); // RTS4
+        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, GPIO_PIN_6);
+        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, 0);
         ROM_SysCtlDelay(1000000);
         //ROM_GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_2, 0);
+        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_6, 0);
+        ROM_GPIOPinWrite(GPIO_PORTB_BASE, GPIO_PIN_7, GPIO_PIN_7);
+    //ROM_GPIOPinWrite(GPIO_PORTA_BASE, GPIO_PIN_4, 0); // RTS4
         ROM_SysCtlDelay(100000);
     }
 

@@ -1,6 +1,6 @@
 #include <stdint.h>
 
-#define LUX_MAX_FRAME_SIZE 32
+#define LUX_MAX_FRAME_SIZE 128
 
 #ifndef NULL
 #define NULL 0

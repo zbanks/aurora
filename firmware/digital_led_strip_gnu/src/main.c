@@ -70,7 +70,7 @@ int main(void) {
 
                 #ifdef MODE_DMX
                 //set_led(1);
-                memcpy(strip_data, luxframe->data, MIN(STRIP_LENGTH, luxframe->length));
+                memcpy(strip_data, luxframe->data, MIN(STRIP_LENGTH * 2, luxframe->length));
                 strip_refresh();
                 #endif
             }

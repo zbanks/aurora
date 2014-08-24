@@ -3,7 +3,8 @@
 #define STRIP_BLACK 0x8000
 #define STRIP_PIXELS 50
 
-#define USART_BAUD_RATE 115200
+//#define USART_BAUD_RATE 115200
+#define USART_BAUD_RATE 3000000
 
 extern uint16_t* const strip_data;
 

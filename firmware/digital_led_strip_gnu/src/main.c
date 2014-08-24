@@ -5,7 +5,11 @@
 //#include "dmx.h"
 
 #define STRIP_LENGTH (STRIP_PIXELS)
+
+#ifndef DEVICE_ADDRESS
 #define DEVICE_ADDRESS      (0x80)
+#endif
+
 #define DEVICE_ADDRESS_MASK (0x80)
 
 //#define MODE_BESPECKLE
@@ -44,7 +48,7 @@ int main(void) {
 
     #ifdef MODE_DMX
         for(int i=0;i<STRIP_LENGTH;i++){
-            strip_data[i]=pack_RGB(0,3,0);
+            strip_data[i]=pack_RGB(1,1,2); // BUG  2b -> 1b
         }
         strip_refresh();
     #endif
@@ -53,7 +57,7 @@ int main(void) {
 
         luxframe = lux_usart_poll();
         if(luxframe){
-            if((luxframe->address & DEVICE_ADDRESS_MASK) == (DEVICE_ADDRESS & DEVICE_ADDRESS_MASK)){
+            if((luxframe->address & luxframe->flags) == (DEVICE_ADDRESS & luxframe->flags)){
                 set_led(luxframe->address & 1);
                 //Example
                 #ifdef MODE_BESPECKLE

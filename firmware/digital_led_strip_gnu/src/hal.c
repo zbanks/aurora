@@ -33,6 +33,8 @@ uint8_t usart_not_first;
 
 void init()
 {
+//AFIO->MAPR |= AFIO_MAPR_SPI1_REMAP;
+//AFIO->MAPR |= AFIO_MAPR_SWJ_CFG_JTAGDISABLE;
   GPIO_InitTypeDef GPIO_InitStructure;
   USART_InitTypeDef USART_InitStructure;
   ADC_InitTypeDef ADC_InitStructure;
@@ -182,7 +184,14 @@ void init()
   DMA_Init(DMA1_Channel5, &DMA_InitStructure);
   USART_DMACmd(USART1, USART_DMAReq_Rx, ENABLE);
   DMA_Cmd(DMA1_Channel5, ENABLE);
+
+  //set_rts(0);
 }
+
+void set_rts(uint8_t state)
+{
+  GPIO_WriteBit(GPIOA, GPIO_Pin_UART_RTS, state);
+}   
 
 void set_led(uint8_t state)
 {
@@ -274,7 +283,7 @@ void strip_flush()
 // Pack three 5 bit colors into a 16 bit pixel value
 uint16_t pack_RGB(uint8_t red, uint8_t green, uint8_t blue)
 {
-  return STRIP_BLACK | (((blue & 0x1F) >>1) << 10) | ((red & 0x1F) << 5) | ((green & 0x1F));
+  return STRIP_BLACK | ((blue & 0x1F) << 10) | ((red & 0x1F) << 5) | ((green & 0x1F));
 }
 
 // Write out strip from memory

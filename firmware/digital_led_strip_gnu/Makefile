@@ -195,7 +195,7 @@ clean:
     
     
 flash:
-	st-flash write $(FULL_PRJ).bin 0x8000000
+	/home/zbanks/stlink2/st-flash write $(FULL_PRJ).bin 0x8000000
 # 
 # Include the dependency files, should be the last of the makefile
 #

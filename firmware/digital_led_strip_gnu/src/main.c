@@ -7,7 +7,7 @@
 #define STRIP_LENGTH (STRIP_PIXELS)
 
 #ifndef DEVICE_ADDRESS
-#define DEVICE_ADDRESS      (0x80)
+#define DEVICE_ADDRESS      (0x12)
 #endif
 
 #define DEVICE_ADDRESS_MASK (0x80)
@@ -58,7 +58,7 @@ int main(void) {
         luxframe = lux_usart_poll();
         if(luxframe){
             if((luxframe->address & luxframe->flags) == (DEVICE_ADDRESS & luxframe->flags)){
-                set_led(luxframe->address & 1);
+                set_led(luxframe->address & 0x80);
                 //Example
                 #ifdef MODE_BESPECKLE
                 if(luxframe->length >= 8){

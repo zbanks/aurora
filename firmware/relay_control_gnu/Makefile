@@ -49,7 +49,7 @@ DLIBS =
  
 #
 # Define project name and Ram/Flash mode here
-PROJECT        = digital_led_strip_gnu
+PROJECT        = relay_control_gnu
 RUN_FROM_FLASH = 1
  
 # List all user C define here, like -D_DEBUG=1
@@ -70,11 +70,7 @@ STMSPINCDDIR = $(STMSPDDIR)/inc
 LINKER = ./linker
 SRC = ./src/main.c
 SRC += ./src/hal.c
-SRC += ./src/dmx.c
-SRC += ./src/effects.c
-SRC += ./src/bespeckle.c
 SRC += ./src/lux.c
-SRC += ./src/syscalls.c
 SRC += ./src/stm32f0xx_it.c
 #SRC += $(DEVDIR)/Source/Templates/system_stm32f0xx.c
 SRC += ./src/system_stm32f0xx.c
@@ -195,7 +191,7 @@ clean:
     
     
 flash:
-	/home/zbanks/stlink3/st-flash  write $(FULL_PRJ).bin 0x8000000
+	/home/zbanks/stlink3/st-flash --reset write $(FULL_PRJ).bin 0x8000000
 # 
 # Include the dependency files, should be the last of the makefile
 #

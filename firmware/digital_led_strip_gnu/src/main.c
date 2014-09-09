@@ -7,7 +7,7 @@
 #define STRIP_LENGTH (STRIP_PIXELS)
 
 #ifndef DEVICE_ADDRESS
-#define DEVICE_ADDRESS      (0x12)
+#define DEVICE_ADDRESS      (0x30)
 #endif
 
 #define DEVICE_ADDRESS_MASK (0x80)

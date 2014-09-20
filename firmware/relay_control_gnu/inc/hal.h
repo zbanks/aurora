@@ -1,7 +1,7 @@
 #include <stdint.h>
 
-//#define USART_BAUD_RATE 115200
-#define USART_BAUD_RATE 3000000
+#define USART_BAUD_RATE 115200
+//#define USART_BAUD_RATE 3000000
 
 void init();
 

@@ -69,3 +69,22 @@ class LuxRelayDevice(SingleLuxDevice):
         data_len = self.framed_packet(data=self.data_buffer, addr=addr, flags=flags)
         self.data_buffer = []
         return data_len
+
+class DummyLuxRelayDevice(object):
+    def __init__(self, addr=0x00, flags=0x00, size=16):
+        self.addr = addr
+        self.flags = flags
+        self.size = size
+        self.state = [True] * size
+        self.next_state = self.state[:]
+
+    def set(self, relay_number, state):
+        self.next_state[relay_number] = state
+
+    def write(self, addr=None, **kwargs):
+        if addr is None:
+            addr = self.addr
+        self.state = self.next_state[:]
+        print "Relay 0x%x:" % addr, self.state
+
+

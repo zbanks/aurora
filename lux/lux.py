@@ -4,14 +4,10 @@ import time
 
 logger = logging.getLogger(__name__)
 
-
-class SingleLuxDevice(object):
-
+class LuxBusDevice(object):
     def __init__(self, port, baudrate=115200, addr=0x00, flags=0x00):
         self.ser = serial.Serial(port, baudrate)
         self.addresses = {}
-        self.addr = addr
-        self.flags = flags
 
     def close(self):
         self.ser.close()
@@ -39,11 +35,7 @@ class SingleLuxDevice(object):
         return self.raw_packet([0, i+1] + rdata[::-1])
         
 
-    def framed_packet(self, data=None, flags=None, addr=None):
-        if flags is None:
-            flags = self.flags
-        if addr is None:
-            flags = self.addr
+    def framed_packet(self, data, addr, flags):
 
         if data is None or len(data) > 250:
             raise Exception("invalid data")
@@ -53,24 +45,48 @@ class SingleLuxDevice(object):
         frame = [len(data), checksum] + crc_frame
         return self.cobs_packet(frame)
 
+class LuxSingleDevice(object):
+    def __init__(self, bus, addr=0x00, flags=0x00):
+        self.bus = bus
+        self.addr = addr
+        self.flags = flags
 
-class LuxRelayDevice(SingleLuxDevice):
-    def __init__(self, *args, **kwargs):
+    def write(self, data):
+        return self.bus.framed_packet(data=data, addr=self.addr, flags=self.flags)
+
+class LuxRelayDevice(LuxSingleDevice):
+    def __init__(self, size=16, *args, **kwargs):
         self.data_buffer = []
-        super(self, LuxRelayDevice).__init__(*args, **kwargs)
+        self.size = size
+        self.state = [True] * size
+        self.next_state = self.state[:]
+        super(LuxRelayDevice, self).__init__(*args, **kwargs)
 
     def set(self, relay_number, state):
         # 1 -> relay on -> light off
         byte = 0 if state else 1
         byte |= relay_number << 4
         self.data_buffer.append(byte)
+        self.next_state[relay_number] = state
 
-    def write(self, addr=None, flags=None):
-        data_len = self.framed_packet(data=self.data_buffer, addr=addr, flags=flags)
+    def flush(self, addr=None, flags=None):
+        if addr is None:
+            addr = self.addr
+        if flags is None:
+            flags = self.flags
+
+        if self.bus is not None: 
+            data_len = self.write(data=self.data_buffer, addr=addr, flags=flags)
+        else:
+            print("Relay 0x%x:" % addr, self.state)
+            data_len = None
+
         self.data_buffer = []
+        self.state = self.next_state[:]
         return data_len
 
 class DummyLuxRelayDevice(object):
+    # Deprecated
     def __init__(self, addr=0x00, flags=0x00, size=16):
         self.addr = addr
         self.flags = flags
